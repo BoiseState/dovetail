@@ -14,7 +14,7 @@ Build a scorecard to keep track of prices, times, etc.
 Last Name       | First Name      | GitHub User Name     | Scrum Role
 --------------- | --------------- | -------------------- | ---------------
 Berkenmeier     | Nathan          | NarthVader           | Developer
-TBD             | TBD             | TBD                  | Scrum Master
+Williams        | Chase           | chaselw              | Scrum Master
 Hogan           | Rachael         | rachaelhogan         | Product Owner
 Brown           | Justin          | jbrown16             | Product Owner
 Ohlinger        | Trevor          | tohlinge             | Developer
