@@ -1,4 +1,5 @@
-# CS471-S18-BitJunkies
+#
+CS471-S18-BitJunkies
 CS471-S18-BitJunkies
 
 ## Team Name: BitJunkies
@@ -12,11 +13,12 @@ Build a scorecard to keep track of prices, times, etc.
 
 Last Name       | First Name      | GitHub User Name     | Scrum Role
 --------------- | --------------- | -------------------- | ---------------
-TBD             | TBD             | TBD                  | Developer
+Berkenmeier     | Nathan          | NarthVader           | Developer
 TBD             | TBD             | TBD                  | Scrum Master
 Hogan           | Rachael         | rachaelhogan         | Product Owner
 TBD             | TBD             | TBD                  | Product Owner
-TBD             | TBD             | TBD                  | TBD
+Ohlinger        | Trevor          | tohlinge             | Developer
+Martin          | Lance           | lancemartin06        | Developer
 
 ## Team Velocity:
 
