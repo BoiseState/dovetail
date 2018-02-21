@@ -1,4 +1,5 @@
-# CS471-S18-BitJunkies
+#
+CS471-S18-BitJunkies
 CS471-S18-BitJunkies
 
 ## Team Name: BitJunkies
@@ -17,6 +18,7 @@ TBD             | TBD             | TBD                  | Scrum Master
 Hogan           | Rachael         | rachaelhogan         | Product Owner
 TBD             | TBD             | TBD                  | Product Owner
 Ohlinger        | Trevor          | tohlinge             | Developer
+Martin          | Lance           | lancemartin06        | Developer
 
 ## Team Velocity:
 
