@@ -16,7 +16,7 @@ TBD             | TBD             | TBD                  | Developer
 TBD             | TBD             | TBD                  | Scrum Master
 Hogan           | Rachael         | rachaelhogan         | Product Owner
 TBD             | TBD             | TBD                  | Product Owner
-TBD             | TBD             | TBD                  | TBD
+Ohlinger        | Trevor          | tohlinge             | Developer
 
 ## Team Velocity:
 
