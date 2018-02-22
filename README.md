@@ -18,6 +18,7 @@ Williams        | Chase           | chaselw              | Scrum Master
 Hogan           | Rachael         | rachaelhogan         | Product Owner
 Brown           | Justin          | jbrown16             | Product Owner
 Ohlinger        | Trevor          | tohlinge             | Developer
+Ohlinger        | Zach            | ZachOhlinger         | Developer
 Martin          | Lance           | lancemartin06        | Developer
 
 ## Team Velocity:
