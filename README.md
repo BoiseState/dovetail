@@ -20,12 +20,8 @@ Brown           | Justin          | jbrown16               | Product Owner
 Ohlinger        | Trevor          | tohlinge               | Developer
 Ohlinger        | Zach            | ZachOhlinger           | Developer
 Martin          | Lance           | lancemartin06          | Developer
-<<<<<<< HEAD
 Adsitt			| Travis	  	  | TravisAdsittBoiseState | Developer
-=======
-Adsitt		| Travis	  | TravisAdsittBoiseState | Developer
 Austin          | Pickett         | DrawClouds             | Developer
->>>>>>> 1191f95fb37e6e192919d42195fe815057756671
 
 ## Team Velocity:
 
