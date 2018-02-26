@@ -21,6 +21,7 @@ Ohlinger        | Trevor          | tohlinge               | Developer
 Ohlinger        | Zach            | ZachOhlinger           | Developer
 Martin          | Lance           | lancemartin06          | Developer
 Adsitt		| Travis	  | TravisAdsittBoiseState | Developer
+Austin          | Pickett         | DrawClouds             | Developer
 
 ## Team Velocity:
 
