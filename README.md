@@ -4,7 +4,7 @@ CS471-S18-BitJunkies
 
 ## Team Name: BitJunkies
 
-## Sponsor Name: Ashby Cabintries 
+## Sponsor Name: Ashby's Cabinetry 
 
 ## Project Description:
 Build a scorecard to keep track of prices, times, etc. 
@@ -20,7 +20,7 @@ Brown           | Justin          | jbrown16               | Product Owner
 Ohlinger        | Trevor          | tohlinge               | Developer
 Ohlinger        | Zach            | ZachOhlinger           | Developer
 Martin          | Lance           | lancemartin06          | Developer
-Adsitt		| Travis	  | TravisAdsittBoiseState | Developer
+Adsitt			| Travis	  	  | TravisAdsittBoiseState | Developer
 
 ## Team Velocity:
 
