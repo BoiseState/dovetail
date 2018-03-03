@@ -16,7 +16,7 @@ Last Name       | First Name      | GitHub User Name       | Scrum Role
 Adsitt			    | Travis  	  	  | TravisAdsittBoiseState | Developer
 Berkenmeier     | Nathan          | NarthVader             | Developer
 Brown           | Justin          | jbrown16               | Product Owner
-Hogan           | Rachael         | rachaelhogan           | Developer/Product Owner
+Hogan           | Rachael         | rachaelhogan           | Product Owner
 Martin          | Lance           | lancemartin06          | Developer
 Ohlinger        | Trevor          | tohlinge               | Developer
 Ohlinger        | Zach            | ZachOhlinger           | Developer
