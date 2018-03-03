@@ -13,15 +13,16 @@ Build a scorecard to keep track of prices, times, etc.
 
 Last Name       | First Name      | GitHub User Name       | Scrum Role
 --------------- | --------------- | ---------------------- | ---------------
+Adsitt			    | Travis  	  	  | TravisAdsittBoiseState | Developer
 Berkenmeier     | Nathan          | NarthVader             | Developer
-Williams        | Chase           | chaselw                | Scrum Master
-Hogan           | Rachael         | rachaelhogan           | Product Owner
 Brown           | Justin          | jbrown16               | Product Owner
+Hogan           | Rachael         | rachaelhogan           | Developer/Product Owner
+Martin          | Lance           | lancemartin06          | Developer
 Ohlinger        | Trevor          | tohlinge               | Developer
 Ohlinger        | Zach            | ZachOhlinger           | Developer
-Martin          | Lance           | lancemartin06          | Developer
-Adsitt			    | Travis  	  	  | TravisAdsittBoiseState | Developer
-Austin          | Pickett         | DrawClouds             | Developer
+Pickett         | Austin          | DrawClouds             | Developer
+Williams        | Chase           | chaselw                | Scrum Master
+
 
 ## Team Velocity:
 
