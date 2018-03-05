@@ -15,7 +15,7 @@ Last Name       | First Name      | GitHub User Name       | Scrum Role
 --------------- | --------------- | ---------------------- | ---------------
 Adsitt			    | Travis  	  	  | TravisAdsittBoiseState | Developer
 Berkenmeier     | Nathan          | NarthVader             | Developer
-Brown           | Justin          | jbrown16               | Product Owner
+Brown           | Justin          | jbrown16               | Developer
 Hogan           | Rachael         | rachaelhogan           | Product Owner
 Martin          | Lance           | lancemartin06          | Developer
 Ohlinger        | Trevor          | tohlinge               | Developer
@@ -28,8 +28,8 @@ Williams        | Chase           | chaselw                | Scrum Master
 
 Sprint | Estimated Velocity | Actual Velocity
 ------ | ------------------ | ---------------
-TBD1   | TBD                | TBD
-TBD2   | TBD                | TBD
-TBD3   | TBD                | TBD
-TBD4   | TBD                | TBD
+1      | TBD                | TBD
+2      | TBD                | TBD
+3      | TBD                | TBD
+4      | TBD                | TBD
 
