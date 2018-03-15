@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button Content="Do Not Press Me" HorizontalAlignment="Left" Margin="219,81,0,0" VerticalAlignment="Top" Width="368" Height="211"/>
+
     </Grid>
 </Window>
