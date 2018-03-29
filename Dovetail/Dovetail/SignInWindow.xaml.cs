@@ -26,8 +26,12 @@ namespace Dovetail
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Interaction logic for Sign In button
+        /// </summary>
         private void btnSignIn_Click(object sender, RoutedEventArgs e)
         {
+            // SQL Server database connection information
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             builder.DataSource = "dovetail2018.database.windows.net";
             builder.UserID = "admin0";
@@ -36,12 +40,14 @@ namespace Dovetail
 
             SqlConnection connection = new SqlConnection(builder.ConnectionString);
 
+            // Attempt to connect to database and verify user credentials
             try
             {
                 if (connection.State == ConnectionState.Closed)
                 {
                     connection.Open();
                 }
+                // Check username/password/access query
                 StringBuilder sb = new StringBuilder();
                 sb.Append("SELECT COUNT(1) ");
                 sb.Append("FROM Users ");
@@ -56,13 +62,16 @@ namespace Dovetail
                 int count = Convert.ToInt32(command.ExecuteScalar());
                 if (count == 1)
                 {
+                    // Show main dashboard window (TODO: show userType-specific window)
                     MainWindow dashboard = new MainWindow();
                     dashboard.Show();
-                    this.Close();
+                    Close();    // close sign in window
                 }
                 else
                 {
-                    MessageBox.Show("Username or password is incorrect!");
+                    txtUsername.Clear();
+                    txtPassword.Clear();
+                    MessageBox.Show("Username or password is incorrect!");  // may want to show error message text in-window, not popup
                 }
             }
             catch (SqlException sqle)
