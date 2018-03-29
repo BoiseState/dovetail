@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dovetail"
         mc:Ignorable="d"
-        Title="Dovetail - Sign In" Height="350" Width="300">
+        Title="Dovetail - Sign In" Height="350" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Border Margin="20">
         <StackPanel>
             <Label Content="Sign In" HorizontalAlignment="Center" FontSize="20"></Label>
@@ -13,8 +13,8 @@
             <Label Content="Username"></Label>
             <TextBox Name="txtUsername" FontSize="12" Height="25"></TextBox>
             <Label Content="Password"></Label>
-            <TextBox Name="txtPassword" FontSize="12" Height="25"></TextBox>
-            <Button Name="btnSignIn" Content="Sign in" Margin="0 20 180 20" BorderThickness="0 0 0 0" Background="#00a1f1" Foreground="#ffffff" Height="30" FontWeight="Bold"></Button>
+            <PasswordBox Name="txtPassword" FontSize="12" Height="25"></PasswordBox>
+            <Button Name="btnSignIn" Click="btnSignIn_Click" Content="Sign in" Margin="0 20 180 20" BorderThickness="0 0 0 0" Background="#00a1f1" Foreground="#ffffff" Height="30" FontWeight="Bold"></Button>
         </StackPanel>
     </Border>
 </Window>
