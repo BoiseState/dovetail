@@ -28,7 +28,7 @@ Williams        | Chase           | chaselw                | Scrum Master
 
 Sprint | Estimated Velocity | Actual Velocity
 ------ | ------------------ | ---------------
-1      | TBD                | TBD
+1      | 100                | 44
 2      | TBD                | TBD
 3      | TBD                | TBD
 4      | TBD                | TBD
