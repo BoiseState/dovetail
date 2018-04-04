@@ -18,6 +18,7 @@ namespace Dovetail
 {
     /// <summary>
     /// Interaction logic for SignInWindow.xaml
+    /// Implementation of Task #60
     /// </summary>
     public partial class SignInWindow : Window
     {
