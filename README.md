@@ -1,6 +1,3 @@
-#
-
-
 ## Team Name: BitJunkies
 
 ## Sponsor Name: Ashby's Cabinetry 
