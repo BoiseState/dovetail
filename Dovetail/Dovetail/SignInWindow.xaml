@@ -13,7 +13,7 @@
             <Label Content="Username"></Label>
             <TextBox Name="txtUsername" FontSize="12" Height="25" VerticalContentAlignment="Center"></TextBox>
             <Label Content="Password"></Label>
-            <PasswordBox Name="txtPassword" FontSize="12" Height="25" VerticalContentAlignment="Center"></PasswordBox>
+            <PasswordBox Name="txtPassword" FontSize="12" Height="25" VerticalContentAlignment="Center" KeyUp="txtPassword_KeyUp"></PasswordBox>
             <Button Name="btnSignIn" Click="btnSignIn_Click" Content="Sign in" Margin="0 20 180 20" BorderThickness="0 0 0 0" Background="#00a1f1" Foreground="#ffffff" Height="30" FontWeight="Bold"></Button>
         </StackPanel>
     </Border>

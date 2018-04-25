@@ -32,6 +32,19 @@ namespace Dovetail
         /// </summary>
         private void btnSignIn_Click(object sender, RoutedEventArgs e)
         {
+            Sign_In();
+        }
+
+        private void txtPassword_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                Sign_In();
+            }
+        }
+
+        private void Sign_In()
+        {
             // SQL Server database connection information
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             builder.DataSource = "dovetail2018.database.windows.net";
