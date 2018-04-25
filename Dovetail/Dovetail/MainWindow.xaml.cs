@@ -20,6 +20,11 @@ namespace Dovetail
     /// </summary>
     public partial class MainWindow : Window
     {
+        public int BoxesPerDay { get; set; } = 10;
+        public double TimePerBox { get; set; } = 43.5;
+        public decimal CostPerBox { get; set; } = 150.0m;
+        public double SheetsCutPerDay { get; set; } = 5;
+
         public MainWindow()
         {
             InitializeComponent();
