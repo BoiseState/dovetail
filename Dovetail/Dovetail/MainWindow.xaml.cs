@@ -25,6 +25,11 @@ namespace Dovetail
         public decimal CostPerBox { get; set; } = 150.0m;
         public double SheetsCutPerDay { get; set; } = 5;
 
+        public int InstallPerDay { get; set; } = 10;
+        public double TimePerInstall { get; set; } = 43.5;
+        public decimal CostPerInstall { get; set; } = 150.0m;
+        public double InstallPerWeek { get; set; } = 5;
+
         public MainWindow()
         {
             InitializeComponent();
