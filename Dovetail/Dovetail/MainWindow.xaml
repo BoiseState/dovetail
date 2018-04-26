@@ -195,7 +195,190 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Install" >
-                <Label>Welcome to the Install Page</Label>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition Height="50px"/>
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.Column="0"
+                            Grid.Row="0"
+                            BorderBrush="GhostWhite" 
+                            BorderThickness="2"
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Column="0"
+                                    Grid.Row="0"
+                                    Grid.ColumnSpan="3"
+                                    FontSize="20"
+                                    FontWeight="Bold"
+                                    Content="Installs Per Day"/>
+                            <Label Grid.Column="0"
+                                   Grid.Row="1" 
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Content="{Binding InstallPerDay}"/>
+                            <Label Grid.Column="1"
+                                   Grid.Row="1"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Content="Weekly Avg"/>
+                            <Image Grid.Column="2"
+                                   Grid.Row="1" 
+                                   Source="Images/GreenUpArrow.png"/>
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Column="1"
+                            Grid.Row="0"
+                            BorderBrush="GhostWhite" 
+                            BorderThickness="2"
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Column="0"
+                                    Grid.Row="0"
+                                    Grid.ColumnSpan="3"
+                                    FontSize="20"
+                                    FontWeight="Bold"
+                                    Content="Time Per Install"/>
+                            <Label Grid.Column="0"
+                                   Grid.Row="1" 
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Content="{Binding TimePerInstall}"/>
+                            <Label Grid.Column="1"
+                                   Grid.Row="1"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Content="Hours Weekly Avg"/>
+                            <Image Grid.Column="2"
+                                   Grid.Row="1" 
+                                   Source="Images/GreenUpArrow.png"/>
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Column="0"
+                            Grid.Row="1"
+                            BorderBrush="GhostWhite" 
+                            BorderThickness="2"
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Column="0"
+                                    Grid.Row="0"
+                                    Grid.ColumnSpan="3"
+                                    FontSize="20"
+                                    FontWeight="Bold"
+                                    Content="Cost Per Install"/>
+                            <Label Grid.Column="0"
+                                   Grid.Row="1" 
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Content="{Binding CostPerInstall}"/>
+                            <Label Grid.Column="1"
+                                   Grid.Row="1"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Content="Weekly Avg"/>
+                            <Image Grid.Column="2"
+                                   Grid.Row="1" 
+                                   Source="Images/YellowDiamond.png"/>
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Column="1"
+                            Grid.Row="1"
+                            BorderBrush="GhostWhite" 
+                            BorderThickness="2"
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Column="0"
+                                    Grid.Row="0"
+                                    Grid.ColumnSpan="3"
+                                    FontSize="20"
+                                    FontWeight="Bold"
+                                    Content="Installs Assigned"/>
+                            <Label Grid.Column="0"
+                                   Grid.Row="1" 
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Content="{Binding InstallsAssigned}"/>
+                            <Label Grid.Column="1"
+                                   Grid.Row="1"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Content="Weekly Avg"/>
+                            <Image Grid.Column="2"
+                                   Grid.Row="1" 
+                                   Source="Images/RedDownArrow.png"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+
             </TabItem>
             <TabItem Header="Spray Booth">
                 <Label>Welcome to the Spray Booth Page</Label>

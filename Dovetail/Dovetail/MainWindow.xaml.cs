@@ -18,7 +18,8 @@ namespace Dovetail
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class 
+        MainWindow : Window
     {
         public int BoxesPerDay { get; set; } = 10;
         public double TimePerBox { get; set; } = 43.5;
@@ -28,7 +29,7 @@ namespace Dovetail
         public int InstallPerDay { get; set; } = 10;
         public double TimePerInstall { get; set; } = 43.5;
         public decimal CostPerInstall { get; set; } = 150.0m;
-        public double InstallPerWeek { get; set; } = 5;
+        public double InstallsAssigned { get; set; } = 5;
 
         public MainWindow()
         {
