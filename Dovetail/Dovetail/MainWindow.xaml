@@ -37,7 +37,7 @@
                                 <RowDefinition/>
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
-                            
+
                             <Label Grid.Column="0"
                                     Grid.Row="0"
                                     Grid.ColumnSpan="3"
@@ -192,9 +192,37 @@
                                    Source="Images/RedDownArrow.png"/>
                         </Grid>
                     </Border>
+
+                    <Button Grid.Column="0"
+                           Grid.Row="2"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Name="Trend"
+                            Click="Trend_Click"
+                            Content="Trend"/>
+
+                    <Button Grid.Column="1"
+                            Grid.Row="2"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Click="DateRange_Click"
+                            Name="DateRange"
+                            Content="Date Range"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Install" >
+            <TabItem Header="Install" RenderTransformOrigin="0.5,0.5" >
+                <TabItem.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.526"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TabItem.RenderTransform>
                 <Label>Welcome to the Install Page</Label>
             </TabItem>
             <TabItem Header="Spray Booth">

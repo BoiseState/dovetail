@@ -34,5 +34,15 @@ namespace Dovetail
         {
             InitializeComponent();
         }
+
+        private void DateRange_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Clicked Date Range");
+        }
+
+        private void Trend_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Clicked Trend");
+        }
     }
 }
