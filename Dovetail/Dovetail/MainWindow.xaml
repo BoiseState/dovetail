@@ -425,14 +425,14 @@
                                    FontWeight="Bold"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
-                                   Content="{Binding WeeklyCompletedSprays}" Height="21" Margin="20,26,47,34" Width="31"/>
+                                   Content="{Binding WeeklyCompletedSprays}"/>
                             <Label
                                    Grid.Row="1"
                                    FontSize="20"
                                    FontWeight="Bold"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
-                                   Content="Weekly Avg" Grid.ColumnSpan="2" Margin="56,19,19,25"/>
+                                   Content="Weekly Avg" Grid.ColumnSpan="2" Margin="65,22,10,22"/>
                             <Image Grid.Column="2"
                                    Grid.Row="1" 
                                    Source="Images/GreenUpArrow.png" RenderTransformOrigin="0.5,0.5">
@@ -477,13 +477,13 @@
                                    FontWeight="Bold"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
-                                   Content="{Binding SprayProductivity}" Margin="21,25,49,39" Height="17" Width="21"/>
+                                   Content="{Binding SprayProductivity}"/>
                             <Label
                                    Grid.Row="1"
                                    FontWeight="Bold"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
-                                   Content="Avg Time Spent &#xD;&#xA;      Per Job" Grid.ColumnSpan="2" Margin="47,10,21,10" Width="115" Height="61" FontSize="14"/>
+                                   Content="Avg Time Spent &#xD;&#xA;      Per Job" Grid.ColumnSpan="3" Margin="76,20,82,0" Width="116" Height="61" FontSize="14"/>
                             <Image Grid.Column="2"
                                    Grid.Row="1" 
                                    Source="Images/GreenUpArrow.png" RenderTransformOrigin="0.5,0.5">
@@ -527,14 +527,14 @@
                                    FontWeight="Bold"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
-                                   Content="{Binding CostPerSpray}" Margin="23,20,46,33" Height="23" Width="31"/>
+                                   Content="{Binding CostPerSpray}" />
                             <Label
                                    Grid.Row="1"
-                                   FontSize="20"
+                                   FontSize="16"
                                    FontWeight="Bold"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
-                                   Content="Weekly Avg" Grid.ColumnSpan="2" Margin="61,7,10,33" Width="129"/>
+                                   Content="Weekly Avg&#xD;&#xA;" Grid.ColumnSpan="3" Margin="92,21,79,19" Width="129"/>
                             <Image Grid.Column="1" 
                                 Source="Images/GreenUpArrow.png" RenderTransformOrigin="0.5,0.5" Margin="79,59,10,10" Grid.RowSpan="2" Grid.ColumnSpan="2">
                                 <Image.RenderTransform>
@@ -554,16 +554,17 @@
                             BorderBrush="GhostWhite" 
                             BorderThickness="2"
                             VerticalAlignment="Center" 
-                            HorizontalAlignment="Center">
-                        <Grid>
+                            HorizontalAlignment="Center" Margin="76,35,85,30">
+                        <Grid Width="212">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
+                                <ColumnDefinition Width="67*"/>
+                                <ColumnDefinition Width="94*"/>
+                                <ColumnDefinition Width="51*"/>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
+                                <RowDefinition Height="48*"/>
+                                <RowDefinition Height="31*"/>
+                                <RowDefinition Height="17*"/>
                             </Grid.RowDefinitions>
 
                             <Label Grid.Column="0"
@@ -571,24 +572,22 @@
                                     Grid.ColumnSpan="3"
                                     FontSize="20"
                                     FontWeight="Bold"
-                                    Content="Number of Assigned Spray Jobs" Margin="0,0,-58,0"/>
+                                    Content="Assigned Spray Jobs" Margin="0,0,-34,10"/>
                             <Label Grid.Column="0"
                                    Grid.Row="1" 
                                    FontSize="20"
                                    FontWeight="Bold"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
-                                   Content="{Binding SpraysAssigned}" RenderTransformOrigin="-0.923,-0.161" Margin="25,29,33,31" Height="21" Width="26"/>
-                            <Label Grid.Column="1"
-                                   Grid.Row="1"
-                                   FontSize="20"
+                                   Content="{Binding SpraysAssigned}" />
+                            <Label
+                                   FontSize="16"
                                    FontWeight="Bold"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
-                                   Content="Weekly Avg" Margin="0,22"/>
-                            <Image Grid.Column="2"
-                                   Grid.Row="1" 
-                                   Source="Images/YellowDiamond.png"/>
+                                   Content="Weekly Avg" Margin="60,1,3,-1" Height="48" Grid.RowSpan="2" Width="98" Grid.ColumnSpan="2" Grid.Row="1"/>
+                            <Image Grid.Column="2" 
+                                   Source="Images/YellowDiamond.png" Margin="0,38,-18,0" Grid.RowSpan="3"/>
                         </Grid>
                     </Border>
                 </Grid>
