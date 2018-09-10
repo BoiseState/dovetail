@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dovetail"
         mc:Ignorable="d"
-        Title="Dovetail - Sign In" Height="350" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Dovetail - Sign In" Height="392.757" Width="310.588" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Border Margin="20">
         <StackPanel>
             <Label Content="Sign In" HorizontalAlignment="Center" FontSize="20"></Label>
+            <Image Height="100" Margin="0,0,-0.4,0" Source="pack://siteoforigin:,,,/Resources/Logo2.png"/>
             <Separator Margin="10"></Separator>
             <Label Content="Username"></Label>
             <TextBox Name="txtUsername" FontSize="12" Height="25" VerticalContentAlignment="Center"></TextBox>

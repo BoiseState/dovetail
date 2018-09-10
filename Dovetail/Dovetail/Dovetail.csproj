@@ -104,7 +104,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\DovetailLogo.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\GreenUpArrow.png" />
   </ItemGroup>
@@ -113,6 +115,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\YellowDiamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
