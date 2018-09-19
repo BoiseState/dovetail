@@ -42,6 +42,7 @@ namespace Dovetail
             this.sprayBoothButton = new System.Windows.Forms.Button();
             this.shopButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
+            this.usersTableAdapter1 = new Dovetail._dovetail_dbDataSetTableAdapters.UsersTableAdapter();
             this.headerPanel.SuspendLayout();
             this.navPanel.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +68,7 @@ namespace Dovetail
             this.navLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.navLabel.Location = new System.Drawing.Point(168, 41);
             this.navLabel.Name = "navLabel";
-            this.navLabel.Size = new System.Drawing.Size(0, 33);
+            this.navLabel.Size = new System.Drawing.Size(0, 40);
             this.navLabel.TabIndex = 3;
             // 
             // resizeButton
@@ -203,6 +204,10 @@ namespace Dovetail
             this.homeButton.UseVisualStyleBackColor = true;
             this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
+            // usersTableAdapter1
+            // 
+            this.usersTableAdapter1.ClearBeforeFill = true;
+            // 
             // DovetailMainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -298,5 +303,6 @@ namespace Dovetail
         private System.Windows.Forms.Button shopButton;
         private System.Windows.Forms.Button homeButton;
         private System.Windows.Forms.Label navLabel;
+        private _dovetail_dbDataSetTableAdapters.UsersTableAdapter usersTableAdapter1;
     }
 }

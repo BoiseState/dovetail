@@ -25,7 +25,14 @@ namespace Dovetail
 
         private void doveButton_Click(object sender, EventArgs e)
         {
-           
+            _dovetail_dbDataSet.UsersDataTable users = usersTableAdapter1.GetUserByType("Admin");
+
+            //users.Count
+            foreach(_dovetail_dbDataSet.UsersRow usr in users)
+            {
+              //  usr.
+            }
+
         }
 
         private void homeButton_Click(object sender, EventArgs e)
