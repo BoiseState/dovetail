@@ -67,6 +67,14 @@
     <Compile Include="SignInWindow.xaml.cs">
       <DependentUpon>SignInWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="_dovetail_dbDataSet.cs">
+      <DependentUpon>_dovetail_dbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_dovetail_dbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_dovetail_dbDataSet.xsd</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -108,6 +116,17 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="_dovetail_dbDataSet.xsc">
+      <DependentUpon>_dovetail_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_dovetail_dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_dovetail_dbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_dovetail_dbDataSet.xss">
+      <DependentUpon>_dovetail_dbDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

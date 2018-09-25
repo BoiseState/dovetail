@@ -33,6 +33,7 @@ namespace Dovetail
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DovetailMainForm));
             this.headerPanel = new System.Windows.Forms.Panel();
+            this.maximizeButton = new System.Windows.Forms.Button();
             this.navLabel = new System.Windows.Forms.Label();
             this.resizeButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@ namespace Dovetail
             this.sprayBoothButton = new System.Windows.Forms.Button();
             this.shopButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
+            this.usersTableAdapter1 = new Dovetail._dovetail_dbDataSetTableAdapters.UsersTableAdapter();
             this.headerPanel.SuspendLayout();
             this.navPanel.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +51,7 @@ namespace Dovetail
             // headerPanel
             // 
             this.headerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(117)))), ((int)(((byte)(180)))));
+            this.headerPanel.Controls.Add(this.maximizeButton);
             this.headerPanel.Controls.Add(this.navLabel);
             this.headerPanel.Controls.Add(this.resizeButton);
             this.headerPanel.Controls.Add(this.exitButton);
@@ -59,6 +62,23 @@ namespace Dovetail
             this.headerPanel.Size = new System.Drawing.Size(1390, 77);
             this.headerPanel.TabIndex = 0;
             this.headerPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DoveMainForm_MouseDown);
+            // 
+            // maximizeButton
+            // 
+            this.maximizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maximizeButton.FlatAppearance.BorderSize = 0;
+            this.maximizeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SkyBlue;
+            this.maximizeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.maximizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.maximizeButton.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maximizeButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.maximizeButton.Location = new System.Drawing.Point(1290, 0);
+            this.maximizeButton.Name = "maximizeButton";
+            this.maximizeButton.Size = new System.Drawing.Size(49, 40);
+            this.maximizeButton.TabIndex = 4;
+            this.maximizeButton.Text = "❒";
+            this.maximizeButton.UseVisualStyleBackColor = true;
+            this.maximizeButton.Click += new System.EventHandler(this.maximizeButton_Click);
             // 
             // navLabel
             // 
@@ -74,17 +94,16 @@ namespace Dovetail
             // 
             this.resizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.resizeButton.FlatAppearance.BorderSize = 0;
-            this.resizeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
-            this.resizeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.resizeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SkyBlue;
+            this.resizeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
             this.resizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.resizeButton.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resizeButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.resizeButton.Location = new System.Drawing.Point(1286, 0);
+            this.resizeButton.Location = new System.Drawing.Point(1235, 0);
             this.resizeButton.Name = "resizeButton";
             this.resizeButton.Size = new System.Drawing.Size(49, 40);
             this.resizeButton.TabIndex = 2;
             this.resizeButton.Text = "─";
-            this.resizeButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.resizeButton.UseVisualStyleBackColor = true;
             // 
             // exitButton
@@ -203,6 +222,10 @@ namespace Dovetail
             this.homeButton.UseVisualStyleBackColor = true;
             this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
+            // usersTableAdapter1
+            // 
+            this.usersTableAdapter1.ClearBeforeFill = true;
+            // 
             // DovetailMainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -298,5 +321,7 @@ namespace Dovetail
         private System.Windows.Forms.Button shopButton;
         private System.Windows.Forms.Button homeButton;
         private System.Windows.Forms.Label navLabel;
+        private _dovetail_dbDataSetTableAdapters.UsersTableAdapter usersTableAdapter1;
+        private Button maximizeButton;
     }
 }

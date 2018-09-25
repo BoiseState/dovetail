@@ -15,8 +15,25 @@ namespace Dovetail
         public DovetailMainForm()
         {
             InitializeComponent();
+
+            /// <summary>
+            /// 
+            /// </summary>
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
+
+            Screen screen = Screen.FromControl(this);
+            int x = screen.WorkingArea.X - screen.Bounds.X;
+            int y = screen.WorkingArea.Y - screen.Bounds.Y;
+            this.MaximizedBounds = new Rectangle(x, y, screen.WorkingArea.Width, screen.WorkingArea.Height);
+            this.MaximumSize = screen.WorkingArea.Size;
+            this.WindowState = FormWindowState.Maximized;
         }
 
+        
+        /// <summary>
+        /// This method is responsible for closing the form. 
+        /// The reas 
+        /// </summary>
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -25,7 +42,14 @@ namespace Dovetail
 
         private void doveButton_Click(object sender, EventArgs e)
         {
-           
+            _dovetail_dbDataSet.UsersDataTable users = usersTableAdapter1.GetUserByType("Admin");
+
+            //users.Count
+            foreach(_dovetail_dbDataSet.UsersRow usr in users)
+            {
+              //  usr.
+            }
+
         }
 
         private void homeButton_Click(object sender, EventArgs e)
@@ -54,6 +78,26 @@ namespace Dovetail
             Button btn = sender as Button;
 
             navbuttonClick(btn);
+        }
+
+        private void maximizeButton_Click(object sender, EventArgs e)
+        {
+            //If this window is maximized
+            if (this.WindowState == FormWindowState.Maximized)      
+            {
+                maximizeButton.Text = "☐";
+                //Set the normal state of this form. 
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                //Maximize the window. 
+                this.WindowState = FormWindowState.Maximized;
+                this.ShowInTaskbar = true;
+
+                maximizeButton.Text = "❒";
+            }
+           
         }
     }
 }
