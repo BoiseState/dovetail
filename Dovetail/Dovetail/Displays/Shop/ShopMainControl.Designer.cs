@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShopMainControl));
             this.headerPanel = new System.Windows.Forms.Panel();
             this.navPanel = new System.Windows.Forms.Panel();
-            this.overviewButton = new System.Windows.Forms.Button();
-            this.dailyStatsButton = new System.Windows.Forms.Button();
             this.historyButton = new System.Windows.Forms.Button();
+            this.dailyStatsButton = new System.Windows.Forms.Button();
+            this.overviewButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.shopOverViewControl1 = new Dovetail.Displays.Shop.ShopOverViewControl();
             this.bufferPanel = new System.Windows.Forms.Panel();
@@ -64,23 +64,22 @@
             this.navPanel.Size = new System.Drawing.Size(1090, 63);
             this.navPanel.TabIndex = 0;
             // 
-            // overviewButton
+            // historyButton
             // 
-            this.overviewButton.BackColor = System.Drawing.Color.Transparent;
-            this.overviewButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.overviewButton.FlatAppearance.BorderSize = 0;
-            this.overviewButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
-            this.overviewButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
-            this.overviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.overviewButton.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.overviewButton.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.overviewButton.Location = new System.Drawing.Point(0, 0);
-            this.overviewButton.Name = "overviewButton";
-            this.overviewButton.Size = new System.Drawing.Size(99, 63);
-            this.overviewButton.TabIndex = 0;
-            this.overviewButton.Text = "Overview";
-            this.overviewButton.UseVisualStyleBackColor = false;
-            this.overviewButton.Click += new System.EventHandler(this.overviewButton_Click);
+            this.historyButton.BackColor = System.Drawing.Color.Transparent;
+            this.historyButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.historyButton.FlatAppearance.BorderSize = 0;
+            this.historyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.historyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            this.historyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.historyButton.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.historyButton.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.historyButton.Location = new System.Drawing.Point(198, 0);
+            this.historyButton.Name = "historyButton";
+            this.historyButton.Size = new System.Drawing.Size(99, 63);
+            this.historyButton.TabIndex = 2;
+            this.historyButton.Text = "History";
+            this.historyButton.UseVisualStyleBackColor = false;
             // 
             // dailyStatsButton
             // 
@@ -99,22 +98,23 @@
             this.dailyStatsButton.Text = "Daily Stats";
             this.dailyStatsButton.UseVisualStyleBackColor = false;
             // 
-            // historyButton
+            // overviewButton
             // 
-            this.historyButton.BackColor = System.Drawing.Color.Transparent;
-            this.historyButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.historyButton.FlatAppearance.BorderSize = 0;
-            this.historyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
-            this.historyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
-            this.historyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.historyButton.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.historyButton.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.historyButton.Location = new System.Drawing.Point(198, 0);
-            this.historyButton.Name = "historyButton";
-            this.historyButton.Size = new System.Drawing.Size(99, 63);
-            this.historyButton.TabIndex = 2;
-            this.historyButton.Text = "History";
-            this.historyButton.UseVisualStyleBackColor = false;
+            this.overviewButton.BackColor = System.Drawing.Color.Transparent;
+            this.overviewButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.overviewButton.FlatAppearance.BorderSize = 0;
+            this.overviewButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.overviewButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            this.overviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.overviewButton.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.overviewButton.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.overviewButton.Location = new System.Drawing.Point(0, 0);
+            this.overviewButton.Name = "overviewButton";
+            this.overviewButton.Size = new System.Drawing.Size(99, 63);
+            this.overviewButton.TabIndex = 0;
+            this.overviewButton.Text = "Overview";
+            this.overviewButton.UseVisualStyleBackColor = false;
+            this.overviewButton.Click += new System.EventHandler(this.overviewButton_Click);
             // 
             // pictureBox1
             // 

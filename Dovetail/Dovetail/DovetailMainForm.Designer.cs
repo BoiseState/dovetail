@@ -37,13 +37,13 @@ namespace Dovetail
             this.navLabel = new System.Windows.Forms.Label();
             this.resizeButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.doveButton = new System.Windows.Forms.Button();
             this.navPanel = new System.Windows.Forms.Panel();
             this.installButton = new System.Windows.Forms.Button();
             this.sprayBoothButton = new System.Windows.Forms.Button();
             this.shopButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
             this.usersTableAdapter1 = new Dovetail._dovetail_dbDataSetTableAdapters.UsersTableAdapter();
-            this.doveButton = new System.Windows.Forms.Button();
             this.shopMainControl1 = new Dovetail.Displays.Shop.ShopMainControl();
             this.headerPanel.SuspendLayout();
             this.navPanel.SuspendLayout();
@@ -86,9 +86,9 @@ namespace Dovetail
             this.navLabel.AutoSize = true;
             this.navLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.navLabel.Location = new System.Drawing.Point(168, 41);
+            this.navLabel.Location = new System.Drawing.Point(168, 34);
             this.navLabel.Name = "navLabel";
-            this.navLabel.Size = new System.Drawing.Size(0, 33);
+            this.navLabel.Size = new System.Drawing.Size(0, 40);
             this.navLabel.TabIndex = 3;
             // 
             // resizeButton
@@ -125,6 +125,23 @@ namespace Dovetail
             this.exitButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // doveButton
+            // 
+            this.doveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(47)))), ((int)(((byte)(79)))));
+            this.doveButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("doveButton.BackgroundImage")));
+            this.doveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.doveButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.doveButton.FlatAppearance.BorderSize = 0;
+            this.doveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.doveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.doveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.doveButton.Location = new System.Drawing.Point(0, 0);
+            this.doveButton.Name = "doveButton";
+            this.doveButton.Size = new System.Drawing.Size(162, 77);
+            this.doveButton.TabIndex = 0;
+            this.doveButton.UseVisualStyleBackColor = false;
+            this.doveButton.Click += new System.EventHandler(this.doveButton_Click);
             // 
             // navPanel
             // 
@@ -210,23 +227,6 @@ namespace Dovetail
             // usersTableAdapter1
             // 
             this.usersTableAdapter1.ClearBeforeFill = true;
-            // 
-            // doveButton
-            // 
-            this.doveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(47)))), ((int)(((byte)(79)))));
-            this.doveButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("doveButton.BackgroundImage")));
-            this.doveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.doveButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.doveButton.FlatAppearance.BorderSize = 0;
-            this.doveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
-            this.doveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.doveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.doveButton.Location = new System.Drawing.Point(0, 0);
-            this.doveButton.Name = "doveButton";
-            this.doveButton.Size = new System.Drawing.Size(162, 77);
-            this.doveButton.TabIndex = 0;
-            this.doveButton.UseVisualStyleBackColor = false;
-            this.doveButton.Click += new System.EventHandler(this.doveButton_Click);
             // 
             // shopMainControl1
             // 
