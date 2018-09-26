@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dovetail"
         mc:Ignorable="d"
-        Title="Dovetail - Sign In" Height="392.757" Width="310.588" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Dovetail - Sign In" Height="441.728" Width="310.588" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Border Margin="20">
-        <StackPanel>
+        <StackPanel Margin="0,0,0,-14.2">
             <Label Content="Sign In" HorizontalAlignment="Center" FontSize="20"></Label>
             <Image Height="100" Margin="0,0,-0.4,0" Source="pack://siteoforigin:,,,/Resources/Logo2.png"/>
             <Separator Margin="10"></Separator>
@@ -15,7 +15,8 @@
             <TextBox Name="txtUsername" FontSize="12" Height="25" VerticalContentAlignment="Center"></TextBox>
             <Label Content="Password"></Label>
             <PasswordBox Name="txtPassword" FontSize="12" Height="25" VerticalContentAlignment="Center" KeyUp="txtPassword_KeyUp"></PasswordBox>
-            <Button Name="btnSignIn" Click="btnSignIn_Click" Content="Sign in" Margin="87,20,88,20" BorderThickness="0 0 0 0" Background="#00a1f1" Foreground="#ffffff" Height="30" FontWeight="Bold"></Button>
+            <Button x:Name="btnSignIn" Click="btnSignIn_Click" Content="Sign in" Margin="87,20,88,20" BorderThickness="0 0 0 0" Background="#00a1f1" Foreground="#ffffff" Height="30" FontWeight="Bold"/>
+            <Button x:Name="btnRegister" Click="btnRegister_Click" Content="Register" Margin="0,20,88,20" BorderThickness="0 0 0 0" Background="#00a1f1" Foreground="#ffffff" Height="30" FontWeight="Bold" HorizontalAlignment="Right" Width="89"/>
         </StackPanel>
     </Border>
 </Window>

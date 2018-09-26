@@ -50,6 +50,19 @@ namespace Dovetail
             }
         }
 
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            Register();
+        }
+
+        private void Register()
+        {
+            RegisterForm rf = new RegisterForm();
+            this.Hide();
+            rf.ShowDialog();
+            this.Show();
+        }
+
         private void Sign_In()
         {
             // SQL Server database connection information
@@ -84,7 +97,7 @@ namespace Dovetail
                 if (count == 1)
                 {
                     // Show main dashboard window (TODO: show userType-specific window)
-                    MainWindow dashboard = new MainWindow();
+                    DovetailMainForm dashboard = new DovetailMainForm();
                     dashboard.Show();
                     Close();    // close sign in window
                 }
