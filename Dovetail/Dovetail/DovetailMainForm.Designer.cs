@@ -83,7 +83,7 @@ namespace Dovetail
             // navLabel
             // 
             this.navLabel.AutoSize = true;
-            this.navLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navLabel.Font = new System.Drawing.Font("Calibri Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.navLabel.Location = new System.Drawing.Point(168, 41);
             this.navLabel.Name = "navLabel";
@@ -105,6 +105,7 @@ namespace Dovetail
             this.resizeButton.TabIndex = 2;
             this.resizeButton.Text = "─";
             this.resizeButton.UseVisualStyleBackColor = true;
+            this.resizeButton.Click += new System.EventHandler(this.resizeButton_Click);
             // 
             // exitButton
             // 
@@ -160,7 +161,7 @@ namespace Dovetail
             this.installButton.FlatAppearance.BorderSize = 0;
             this.installButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.installButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.installButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.installButton.Font = new System.Drawing.Font("Calibri Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.installButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.installButton.Location = new System.Drawing.Point(0, 156);
             this.installButton.Name = "installButton";
@@ -177,7 +178,7 @@ namespace Dovetail
             this.sprayBoothButton.FlatAppearance.BorderSize = 0;
             this.sprayBoothButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.sprayBoothButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sprayBoothButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sprayBoothButton.Font = new System.Drawing.Font("Calibri Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sprayBoothButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.sprayBoothButton.Location = new System.Drawing.Point(0, 104);
             this.sprayBoothButton.Name = "sprayBoothButton";
@@ -194,7 +195,7 @@ namespace Dovetail
             this.shopButton.FlatAppearance.BorderSize = 0;
             this.shopButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.shopButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.shopButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shopButton.Font = new System.Drawing.Font("Calibri Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.shopButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.shopButton.Location = new System.Drawing.Point(0, 52);
             this.shopButton.Name = "shopButton";
@@ -211,7 +212,7 @@ namespace Dovetail
             this.homeButton.FlatAppearance.BorderSize = 0;
             this.homeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeButton.Font = new System.Drawing.Font("Calibri Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.homeButton.Location = new System.Drawing.Point(0, 0);
             this.homeButton.Name = "homeButton";
