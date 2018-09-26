@@ -15,6 +15,23 @@ namespace Dovetail.Displays.Shop
         public ShopOverViewControl()
         {
             InitializeComponent();
+
+            loadJobs();
+        }
+
+        private void currentJobsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(currentJobsListBox.SelectedItem != null)
+            {
+                selectedJobLabel.Text = currentJobsListBox.SelectedItem.ToString();
+            }
+        }
+        /// <summary>
+        /// This method is responsible for loading the current jobs into the list box.
+        /// </summary>
+        private void loadJobs()
+        {
+            jobsInProgressLabel.Text = currentJobsListBox.Items.Count.ToString();
         }
     }
 }
