@@ -58,6 +58,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Displays\Shop\ShopMainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Displays\Shop\ShopMainControl.Designer.cs">
+      <DependentUpon>ShopMainControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Displays\Shop\ShopOverViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Displays\Shop\ShopOverViewControl.Designer.cs">
+      <DependentUpon>ShopOverViewControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DovetailMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +124,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Displays\Shop\ShopMainControl.resx">
+      <DependentUpon>ShopMainControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Displays\Shop\ShopOverViewControl.resx">
+      <DependentUpon>ShopOverViewControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DovetailMainForm.resx">
       <DependentUpon>DovetailMainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +173,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Displays\Installs\" />
+    <Folder Include="Displays\SprayBooth\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Icons\ShopIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Icons\SectionBackDrop-Gray.jpg" />
+    <Resource Include="Images\Icons\SectionBackDrop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Icons\SectionBackDrop-Blue.png" />
+    <Resource Include="Images\Icons\SectionBackDrop-Gray.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
