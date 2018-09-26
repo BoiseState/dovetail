@@ -16,20 +16,25 @@ namespace Dovetail
         {
             InitializeComponent();
 
-            /// <summary>
-            /// 
-            /// </summary>
-            this.SetStyle(ControlStyles.ResizeRedraw, true);
-
+            setScreenDimesions();
+        }
+        /// <summary>
+        /// This block of code is responsible for setting the screen size. 
+        /// </summary>
+        private void setScreenDimesions()
+        {
             Screen screen = Screen.FromControl(this);
             int x = screen.WorkingArea.X - screen.Bounds.X;
             int y = screen.WorkingArea.Y - screen.Bounds.Y;
             this.MaximizedBounds = new Rectangle(x, y, screen.WorkingArea.Width, screen.WorkingArea.Height);
             this.MaximumSize = screen.WorkingArea.Size;
             this.WindowState = FormWindowState.Maximized;
+            this.Left = Top = 0;
+            this.Width = Screen.PrimaryScreen.WorkingArea.Width;
+            this.Height = Screen.PrimaryScreen.WorkingArea.Height;
         }
 
-        
+
         /// <summary>
         /// This method is responsible for closing the form. 
         /// The reas 
