@@ -36,34 +36,31 @@ namespace Dovetail
                 {
                     connection.Open();
                 }
-                MessageBox.Show("fuck ya, we're connected. dick to pussy");
-                this.Close();
                 // Check username/password/access query
-                //StringBuilder sb = new StringBuilder();
-                //sb.Append("INSERT COUNT(1) ");
-                //sb.Append("FROM Users ");
-                //sb.Append("WHERE Username = @Username AND Password = @Password AND Access = 1;");
-                //String sql = sb.ToString();
+                StringBuilder sb = new StringBuilder();
+                sb.Append("INSERT INTO Users ");
+                sb.Append("VALUES (@Username, @Password, @FirstName, @LastName, @Email, 'Employee', 1);");
+                String sql = sb.ToString();
 
-                //SqlCommand command = new SqlCommand(sql, connection);
-                //command.CommandType = CommandType.Text;
-                //command.Parameters.AddWithValue("@Username", txtUsername.Text);
-                //command.Parameters.AddWithValue("@Password", txtPassword.Password);
+                SqlCommand command = new SqlCommand(sql, connection);
+                command.CommandType = CommandType.Text;
+                command.Parameters.AddWithValue("@Username", textBox1.Text);
+                command.Parameters.AddWithValue("@Password", textBox2.Text);
+                command.Parameters.AddWithValue("@FirstName", textBox3.Text);
+                command.Parameters.AddWithValue("@LastName", textBox4.Text);
+                command.Parameters.AddWithValue("@Email", textBox5.Text);
 
-                //int count = Convert.ToInt32(command.ExecuteScalar());
-                //if (count == 1)
-                //{
-                //   // Show main dashboard window (TODO: show userType-specific window)
-                //    DovetailMainForm dashboard = new DovetailMainForm();
-                //    dashboard.Show();
-                //    Close();    // close sign in window
-                //}
-                //else
-                //{
-                //    txtUsername.Clear();
-                //    txtPassword.Clear();
-                //   MessageBox.Show("Username or password is incorrect!");  // may want to show error message text in-window, not popup
-                //}
+                int result = command.ExecuteNonQuery();
+                if (result == 1)
+                {
+                   Close();    // close sign in window
+                }
+                else
+                {
+                    textBox1.Clear();
+                    textBox2.Clear();
+                   MessageBox.Show("Registration Failed. Pick another User/Pass");  // may want to show error message text in-window, not popup
+                }
             }
             catch (SqlException sqle)
             {
