@@ -99,5 +99,12 @@ namespace Dovetail
             }
            
         }
+        /// <summary>
+        /// On click, this method will minimize the window. 
+        /// </summary>
+        private void resizeButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
