@@ -58,6 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DatabaseAPI\UserAccountHandler.cs" />
     <Compile Include="Displays\Shop\ShopMainControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -167,7 +168,6 @@
     <Resource Include="Resources\Logo2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DatabaseAPI\" />
     <Folder Include="Displays\Installs\" />
     <Folder Include="Displays\SprayBooth\" />
   </ItemGroup>
