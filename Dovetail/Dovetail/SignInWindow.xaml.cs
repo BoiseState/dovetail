@@ -28,7 +28,7 @@ namespace Dovetail
             DovetailMainForm mainForm = new DovetailMainForm();
             WindowInteropHelper wih = new WindowInteropHelper(new Window());
             wih.Owner = mainForm.Handle;
-            mainForm.Show();
+            //mainForm.Show();
 
 
             InitializeComponent();
@@ -90,8 +90,19 @@ namespace Dovetail
 
                 SqlCommand command = new SqlCommand(sql, connection);
                 command.CommandType = CommandType.Text;
-                command.Parameters.AddWithValue("@Username", txtUsername.Text);
-                command.Parameters.AddWithValue("@Password", txtPassword.Password);
+                if (!string.IsNullOrEmpty(txtUsername.Text) && !string.IsNullOrEmpty(txtPassword.Password))
+                {
+                    command.Parameters.AddWithValue("@Username", txtUsername.Text);
+                    command.Parameters.AddWithValue("@Password", txtPassword.Password);
+                }
+                else
+                {
+                    // Username and/or password were not present. Simply bail out and alert the user.
+                    txtUsername.Clear();
+                    txtPassword.Clear();
+                    SignInAlertMsgLabel.Content = "Incomplete sign-in credentials!";
+                    return;
+                }
 
                 int count = Convert.ToInt32(command.ExecuteScalar());
                 if (count == 1)
@@ -105,11 +116,12 @@ namespace Dovetail
                 {
                     txtUsername.Clear();
                     txtPassword.Clear();
-                    MessageBox.Show("Username or password is incorrect!");  // may want to show error message text in-window, not popup
+                    SignInAlertMsgLabel.Content = "Username or password is incorrect!";
                 }
             }
             catch (SqlException sqle)
             {
+                txtPassword.Clear();
                 MessageBox.Show(sqle.Message);
             }
             finally

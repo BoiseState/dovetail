@@ -93,16 +93,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_dovetail_dbDataSet.xsd</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SignInWindow.xaml">
@@ -172,9 +164,10 @@
     <Resource Include="Images\YellowDiamond.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logo2.png" />
+    <Resource Include="Resources\Logo2.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DatabaseAPI\" />
     <Folder Include="Displays\Installs\" />
     <Folder Include="Displays\SprayBooth\" />
   </ItemGroup>
