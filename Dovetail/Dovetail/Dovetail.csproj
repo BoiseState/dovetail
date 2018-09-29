@@ -58,6 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DatabaseAPI\DovetailDbConnection.cs" />
     <Compile Include="DatabaseAPI\UserAccountHandler.cs" />
     <Compile Include="Displays\Shop\ShopMainControl.cs">
       <SubType>UserControl</SubType>
@@ -77,6 +78,7 @@
     <Compile Include="DovetailMainForm.Designer.cs">
       <DependentUpon>DovetailMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DovetailUser.cs" />
     <Compile Include="RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>

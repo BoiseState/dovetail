@@ -66,7 +66,7 @@ namespace Dovetail
 
         private void Sign_In()
         {
-            bool signInSuccess = UserAccountHandler.UserSignIn(txtUsername.Text, txtPassword.Password);
+            bool signInSuccess = UserAccountHandler.UserSignIn(new DovetailUser(txtUsername.Text, txtPassword.Password));
 
             if (!signInSuccess)
             {
