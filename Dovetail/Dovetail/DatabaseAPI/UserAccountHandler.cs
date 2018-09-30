@@ -9,14 +9,18 @@ using System.Windows;
 
 namespace Dovetail.DatabaseAPI
 {
+    /// <summary>
+    /// A Dovetail database API specifically used for handling user account controls.
+    /// </summary>
     public static class UserAccountHandler
     {
+        #region User sign-in controls
         /// <summary>
         /// API procedure for signing the specified user into the Dovetail software.
         /// </summary>
         /// <param name="username"></param>
         /// <param name="password"></param>
-        /// <returns>True, if success; false otherwise</returns>
+        /// <returns>True, if sign-in successful; false otherwise</returns>
         public static bool UserSignIn(DovetailUser user)
         {
             // Prepare connection to the database
@@ -26,11 +30,6 @@ namespace Dovetail.DatabaseAPI
             // Attempt to connect to database and verify user credentials
             try
             {
-                if (connection.State == ConnectionState.Closed)
-                {
-                    connection.Open();
-                }
-
                 // Prepare sign-in query
                 StringBuilder sb = new StringBuilder();
                 sb.Append("SELECT COUNT(1) ");
@@ -81,7 +80,7 @@ namespace Dovetail.DatabaseAPI
         /// <returns>True, if success; false otherwise</returns>
         public static bool UserSignOut(string username)
         {
-            return false;
+            throw new NotImplementedException("User sign-out is not yet implemented for DatabaseAPI!");
         }
 
         /// <summary>
@@ -98,9 +97,11 @@ namespace Dovetail.DatabaseAPI
             // Attempt to connect to database and verify user credentials
             try
             {
-                if (connection.State == ConnectionState.Closed)
+                // Check if user already exists
+                if (UserAlreadyExists(user.Username))
                 {
-                    connection.Open();
+                    connection.Close();
+                    return false;
                 }
 
                 // Prepare register new user query
@@ -114,7 +115,9 @@ namespace Dovetail.DatabaseAPI
                     CommandType = CommandType.Text
                 };
 
-                if (string.IsNullOrEmpty(user.Username) || string.IsNullOrEmpty(user.Password) || string.IsNullOrEmpty(user.FirstName) || string.IsNullOrEmpty(user.LastName) || string.IsNullOrEmpty(user.Email))
+                if (string.IsNullOrEmpty(user.Username) || string.IsNullOrEmpty(user.Password) || 
+                    string.IsNullOrEmpty(user.FirstName) || string.IsNullOrEmpty(user.LastName) || 
+                    string.IsNullOrEmpty(user.Email))
                 {
                     connection.Close();
                     return false;
@@ -155,42 +158,404 @@ namespace Dovetail.DatabaseAPI
 
             return canRegisterUser;
         }
+        #endregion
 
-        public static void RevokeAccessForUser(string username)
+        #region User profile update controls
+        /// <summary>
+        /// API procedure for revoking the specified user's access to Dovetail software.
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns>True, if access revoked successfully; false otherwise</returns>
+        public static bool RevokeAccessForUser(string username)
         {
+            SqlConnection connection = DovetailDbConnection.GetConnection();
+            bool revokeAccessSuccess = false;
 
+            try
+            {
+                // Prepare register new user query
+                StringBuilder sb = new StringBuilder();
+                sb.Append("UPDATE Users ");
+                sb.Append("SET Access = 0 ");
+                sb.Append("WHERE Username = @Username;");
+                string sql = sb.ToString();
+
+                SqlCommand command = new SqlCommand(sql, connection)
+                {
+                    CommandType = CommandType.Text
+                };
+
+                if (string.IsNullOrEmpty(username))
+                {
+                    connection.Close();
+                    return false;
+                }
+
+                command.Parameters.AddWithValue("@Username", username);
+
+                // Execute query; only one valid user should be updated/returned
+                int result = command.ExecuteNonQuery();
+                if (result != 1)
+                {
+                    connection.Close();
+                    return false;
+                }
+
+                // User access has been successfully revoked
+                revokeAccessSuccess = true;
+            }
+            catch (SqlException sqle)
+            {
+                connection.Close();
+                MessageBox.Show(sqle.Message);
+            }
+
+            connection.Close();
+
+            return revokeAccessSuccess;
         }
 
-        public static void AllowAccessForUser(string username)
+        /// <summary>
+        /// API procedure for allowing access for the specified user's account in Dovetail software.
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns>True, if access updated successfully; false otherwise</returns>
+        public static bool AllowAccessForUser(string username)
         {
+            SqlConnection connection = DovetailDbConnection.GetConnection();
+            bool allowAccessSuccess = false;
 
+            try
+            {
+                // Prepare register new user query
+                StringBuilder sb = new StringBuilder();
+                sb.Append("UPDATE Users ");
+                sb.Append("SET Access = 1 ");
+                sb.Append("WHERE Username = @Username;");
+                string sql = sb.ToString();
+
+                SqlCommand command = new SqlCommand(sql, connection)
+                {
+                    CommandType = CommandType.Text
+                };
+
+                if (string.IsNullOrEmpty(username))
+                {
+                    connection.Close();
+                    return false;
+                }
+
+                command.Parameters.AddWithValue("@Username", username);
+
+                // Execute query; only one valid user should be updated/returned
+                int result = command.ExecuteNonQuery();
+                if (result != 1)
+                {
+                    connection.Close();
+                    return false;
+                }
+
+                // User's access has been successfully allowed
+                allowAccessSuccess = true;
+            }
+            catch (SqlException sqle)
+            {
+                connection.Close();
+                MessageBox.Show(sqle.Message);
+            }
+
+            connection.Close();
+
+            return allowAccessSuccess;
         }
 
-        public static void UserUpdatePassword(string oldPass, string newPass)
+        /// <summary>
+        /// API procedure for updating the user's username to the new username.
+        /// </summary>
+        /// <param name="oldUsername"></param>
+        /// <param name="newUsername"></param>
+        /// <returns>True, if username change is successful; false otherwise</returns>
+        public static bool UserUpdateUsername(string oldUsername, string newUsername)
         {
+            SqlConnection connection = DovetailDbConnection.GetConnection();
+            bool usernameUpdateSuccess = false;
 
+            try
+            {
+                // Prepare register new user query
+                StringBuilder sb = new StringBuilder();
+                sb.Append("UPDATE Users ");
+                sb.Append("SET Username = @NewUsername ");
+                sb.Append("WHERE Username = @OldUsername;");
+                string sql = sb.ToString();
+
+                SqlCommand command = new SqlCommand(sql, connection)
+                {
+                    CommandType = CommandType.Text
+                };
+
+                if (string.IsNullOrEmpty(oldUsername) || string.IsNullOrEmpty(newUsername))
+                {
+                    connection.Close();
+                    return false;
+                }
+
+                command.Parameters.AddWithValue("@OldUsername", oldUsername);
+                command.Parameters.AddWithValue("@NewUsername", newUsername);
+
+                // Execute query; only one valid user should be updated/returned
+                int result = command.ExecuteNonQuery();
+                if (result != 1)
+                {
+                    connection.Close();
+                    return false;
+                }
+
+                // User's username has been successfully updated
+                usernameUpdateSuccess = true;
+            }
+            catch (SqlException sqle)
+            {
+                connection.Close();
+                MessageBox.Show(sqle.Message);
+            }
+
+            connection.Close();
+
+            return usernameUpdateSuccess;
         }
 
-        public static void UserUpdateWage(double newWage)
+        /// <summary>
+        /// API procedure for updating the user's password to the new password.
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="newPassword"></param>
+        /// <returns>True, if username change is successful; false otherwise</returns>
+        public static bool UserUpdatePassword(string username, string newPassword)
         {
+            SqlConnection connection = DovetailDbConnection.GetConnection();
+            bool passwordUpdatedSuccessfully = false;
 
+            try
+            {
+                // Prepare register new user query
+                StringBuilder sb = new StringBuilder();
+                sb.Append("UPDATE Users ");
+                sb.Append("SET Password = @Password ");
+                sb.Append("WHERE Username = @Username;");
+                string sql = sb.ToString();
+
+                SqlCommand command = new SqlCommand(sql, connection)
+                {
+                    CommandType = CommandType.Text
+                };
+
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(newPassword))
+                {
+                    connection.Close();
+                    return false;
+                }
+
+                command.Parameters.AddWithValue("@Username", username);
+                command.Parameters.AddWithValue("@Password", newPassword);
+
+                // Execute query; only one valid user should be updated/returned
+                int result = command.ExecuteNonQuery();
+                if (result != 1)
+                {
+                    connection.Close();
+                    return false;
+                }
+
+                // User's password has been successfully updated
+                passwordUpdatedSuccessfully = true;
+            }
+            catch (SqlException sqle)
+            {
+                connection.Close();
+                MessageBox.Show(sqle.Message);
+            }
+
+            connection.Close();
+
+            return passwordUpdatedSuccessfully;
         }
 
-        public static void UserUpdateEmail(string newEmail)
+        /// <summary>
+        /// API procedure for updating the specified user's wage to the new wage.
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="newWage"></param>
+        /// <returns>True, if user's wage updated successfully; false otherwise</returns>
+        public static bool UserUpdateWage(string username, double newWage)
         {
+            SqlConnection connection = DovetailDbConnection.GetConnection();
+            bool wageUpdatedSuccessfully = false;
 
+            try
+            {
+                // Prepare register new user query
+                StringBuilder sb = new StringBuilder();
+                sb.Append("UPDATE Users ");
+                sb.Append("SET Wage = @NewWage ");
+                sb.Append("WHERE Username = @Username;");
+                string sql = sb.ToString();
+
+                SqlCommand command = new SqlCommand(sql, connection)
+                {
+                    CommandType = CommandType.Text
+                };
+
+                if (string.IsNullOrEmpty(username) || newWage < 0)
+                {
+                    connection.Close();
+                    return false;
+                }
+
+                command.Parameters.AddWithValue("@Username", username);
+                command.Parameters.AddWithValue("@NewWage", newWage);
+
+                // Execute query; only one valid user should be updated/returned
+                int result = command.ExecuteNonQuery();
+                if (result != 1)
+                {
+                    connection.Close();
+                    return false;
+                }
+
+                // User's wage has been successfully updated
+                wageUpdatedSuccessfully = true;
+            }
+            catch (SqlException sqle)
+            {
+                connection.Close();
+                MessageBox.Show(sqle.Message);
+            }
+
+            connection.Close();
+
+            return wageUpdatedSuccessfully;
         }
 
-        public static void UserUpdateUserType(string username, string newUserType)
+        /// <summary>
+        /// API procedure for updating the specified user's email to the new email address.
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="newEmail"></param>
+        /// <returns>True, if email updated successfully; false otherwise</returns>
+        public static bool UserUpdateEmail(string username, string newEmail)
         {
+            SqlConnection connection = DovetailDbConnection.GetConnection();
+            bool emailUpdatedSuccessfully = false;
 
+            try
+            {
+                // Prepare register new user query
+                StringBuilder sb = new StringBuilder();
+                sb.Append("UPDATE Users ");
+                sb.Append("SET Email = @NewEmail ");
+                sb.Append("WHERE Username = @Username;");
+                string sql = sb.ToString();
+
+                SqlCommand command = new SqlCommand(sql, connection)
+                {
+                    CommandType = CommandType.Text
+                };
+
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(newEmail))
+                {
+                    connection.Close();
+                    return false;
+                }
+
+                command.Parameters.AddWithValue("@Username", username);
+                command.Parameters.AddWithValue("@NewEmail", newEmail);
+
+                // Execute query; only one valid user should be updated/returned
+                int result = command.ExecuteNonQuery();
+                if (result != 1)
+                {
+                    connection.Close();
+                    return false;
+                }
+
+                // User's email has been successfully updated
+                emailUpdatedSuccessfully = true;
+            }
+            catch (SqlException sqle)
+            {
+                connection.Close();
+                MessageBox.Show(sqle.Message);
+            }
+
+            connection.Close();
+
+            return emailUpdatedSuccessfully;
         }
 
+        /// <summary>
+        /// API procedure for updating the specified user's privileges to the new user type.
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="newUserType"></param>
+        /// <returns>True, if user type updated successfully; false otherwise</returns>
+        public static bool UserUpdateUserType(string username, string newUserType)
+        {
+            SqlConnection connection = DovetailDbConnection.GetConnection();
+            bool UserTypeUpdatedSuccessfully = false;
+
+            try
+            {
+                // Prepare register new user query
+                StringBuilder sb = new StringBuilder();
+                sb.Append("UPDATE Users ");
+                sb.Append("SET UserType = @NewUserType ");
+                sb.Append("WHERE Username = @Username;");
+                string sql = sb.ToString();
+
+                SqlCommand command = new SqlCommand(sql, connection)
+                {
+                    CommandType = CommandType.Text
+                };
+
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(newUserType))
+                {
+                    connection.Close();
+                    return false;
+                }
+
+                command.Parameters.AddWithValue("@Username", username);
+                command.Parameters.AddWithValue("@NewUserType", newUserType);
+
+                // Execute query; only one valid user should be updated/returned
+                int result = command.ExecuteNonQuery();
+                if (result != 1)
+                {
+                    connection.Close();
+                    return false;
+                }
+
+                // User's email has been successfully updated
+                UserTypeUpdatedSuccessfully = true;
+            }
+            catch (SqlException sqle)
+            {
+                connection.Close();
+                MessageBox.Show(sqle.Message);
+            }
+
+            connection.Close();
+
+            return UserTypeUpdatedSuccessfully;
+        }
+        #endregion
+
+        #region API helpers
         /// <summary>
         /// Validates specified email address
         /// </summary>
         /// <param name="email"></param>
-        /// <returns></returns>
+        /// <returns>True, if email is valid; false otherwise</returns>
         private static bool IsValidEmail(string email)
         {
             try
@@ -203,5 +568,49 @@ namespace Dovetail.DatabaseAPI
                 return false;
             }
         }
+
+        /// <summary>
+        /// Check if the specified user already exists in the database.
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns>True, if user already exists; false otherwise</returns>
+        private static bool UserAlreadyExists(string username)
+        {
+            SqlConnection connection = DovetailDbConnection.GetConnection();
+            bool userAlreadyExists = false;
+
+            try
+            {
+                // Prepare register new user query
+                StringBuilder sb = new StringBuilder();
+                sb.Append("SELECT * FROM Users ");
+                sb.Append("WHERE Username = @Username;");
+                string sql = sb.ToString();
+
+                SqlCommand command = new SqlCommand(sql, connection)
+                {
+                    CommandType = CommandType.Text
+                };
+
+                command.Parameters.AddWithValue("@Username", username);
+
+                // Execute query; only one valid user should be found/returned
+                int queryResult = Convert.ToInt32(command.ExecuteScalar());
+                if (queryResult > 0)
+                {
+                    userAlreadyExists = true;
+                }
+            }
+            catch (SqlException sqle)
+            {
+                connection.Close();
+                MessageBox.Show(sqle.Message);
+            }
+
+            connection.Close();
+
+            return userAlreadyExists;
+        }
+        #endregion
     }
 }
