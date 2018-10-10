@@ -41,23 +41,23 @@
             this.label5 = new System.Windows.Forms.Label();
             this.headerLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.selectedJobLabel = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.selectedJobLabel = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.dailySummaryPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // dailySummaryPanel
@@ -222,28 +222,6 @@
             this.panel1.Size = new System.Drawing.Size(349, 661);
             this.panel1.TabIndex = 1;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Font = new System.Drawing.Font("Calibri Light", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(348, 41);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "HOURS                             ";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(925, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(148, 661);
-            this.panel2.TabIndex = 2;
-            // 
             // panel6
             // 
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -254,40 +232,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(349, 620);
             this.panel6.TabIndex = 2;
-            // 
-            // panel7
-            // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.selectedJobLabel);
-            this.panel7.Controls.Add(this.label8);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(349, 79);
-            this.panel7.TabIndex = 3;
-            // 
-            // selectedJobLabel
-            // 
-            this.selectedJobLabel.AutoSize = true;
-            this.selectedJobLabel.BackColor = System.Drawing.Color.Transparent;
-            this.selectedJobLabel.Font = new System.Drawing.Font("Calibri Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectedJobLabel.ForeColor = System.Drawing.Color.White;
-            this.selectedJobLabel.Location = new System.Drawing.Point(86, 17);
-            this.selectedJobLabel.Name = "selectedJobLabel";
-            this.selectedJobLabel.Size = new System.Drawing.Size(0, 33);
-            this.selectedJobLabel.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Calibri Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(2, 17);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 33);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Job:";
             // 
             // panel8
             // 
@@ -324,6 +268,62 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Total Hours:";
             // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.selectedJobLabel);
+            this.panel7.Controls.Add(this.label8);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(349, 79);
+            this.panel7.TabIndex = 3;
+            // 
+            // selectedJobLabel
+            // 
+            this.selectedJobLabel.AutoSize = true;
+            this.selectedJobLabel.BackColor = System.Drawing.Color.Transparent;
+            this.selectedJobLabel.Font = new System.Drawing.Font("Calibri Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectedJobLabel.ForeColor = System.Drawing.Color.White;
+            this.selectedJobLabel.Location = new System.Drawing.Point(86, 17);
+            this.selectedJobLabel.Name = "selectedJobLabel";
+            this.selectedJobLabel.Size = new System.Drawing.Size(0, 33);
+            this.selectedJobLabel.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Calibri Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(2, 17);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 33);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Job:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Font = new System.Drawing.Font("Calibri Light", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(348, 41);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "HOURS                             ";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(925, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(148, 661);
+            this.panel2.TabIndex = 2;
+            // 
             // ShopOverViewControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -344,10 +344,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel6.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }

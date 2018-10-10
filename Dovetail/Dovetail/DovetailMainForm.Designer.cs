@@ -39,9 +39,11 @@ namespace Dovetail
             this.exitButton = new System.Windows.Forms.Button();
             this.doveButton = new System.Windows.Forms.Button();
             this.navPanel = new System.Windows.Forms.Panel();
+            this.settingsButton = new System.Windows.Forms.Button();
             this.installButton = new System.Windows.Forms.Button();
             this.sprayBoothButton = new System.Windows.Forms.Button();
             this.shopButton = new System.Windows.Forms.Button();
+            this.officeButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
             this.usersTableAdapter1 = new Dovetail._dovetail_dbDataSetTableAdapters.UsersTableAdapter();
             this.shopMainControl1 = new Dovetail.Displays.Shop.ShopMainControl();
@@ -146,15 +148,34 @@ namespace Dovetail
             // navPanel
             // 
             this.navPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(47)))), ((int)(((byte)(79)))));
+            this.navPanel.Controls.Add(this.settingsButton);
             this.navPanel.Controls.Add(this.installButton);
             this.navPanel.Controls.Add(this.sprayBoothButton);
             this.navPanel.Controls.Add(this.shopButton);
+            this.navPanel.Controls.Add(this.officeButton);
             this.navPanel.Controls.Add(this.homeButton);
             this.navPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.navPanel.Location = new System.Drawing.Point(0, 77);
             this.navPanel.Name = "navPanel";
             this.navPanel.Size = new System.Drawing.Size(162, 663);
             this.navPanel.TabIndex = 1;
+            // 
+            // settingsButton
+            // 
+            this.settingsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.settingsButton.FlatAppearance.BorderSize = 0;
+            this.settingsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingsButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.settingsButton.Location = new System.Drawing.Point(0, 380);
+            this.settingsButton.Name = "settingsButton";
+            this.settingsButton.Size = new System.Drawing.Size(162, 76);
+            this.settingsButton.TabIndex = 7;
+            this.settingsButton.Text = "Settings";
+            this.settingsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.settingsButton.UseVisualStyleBackColor = true;
+            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
             // installButton
             // 
@@ -164,9 +185,9 @@ namespace Dovetail
             this.installButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.installButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.installButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.installButton.Location = new System.Drawing.Point(0, 156);
+            this.installButton.Location = new System.Drawing.Point(0, 304);
             this.installButton.Name = "installButton";
-            this.installButton.Size = new System.Drawing.Size(162, 52);
+            this.installButton.Size = new System.Drawing.Size(162, 76);
             this.installButton.TabIndex = 5;
             this.installButton.Text = "Installs";
             this.installButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -181,9 +202,9 @@ namespace Dovetail
             this.sprayBoothButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sprayBoothButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sprayBoothButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.sprayBoothButton.Location = new System.Drawing.Point(0, 104);
+            this.sprayBoothButton.Location = new System.Drawing.Point(0, 228);
             this.sprayBoothButton.Name = "sprayBoothButton";
-            this.sprayBoothButton.Size = new System.Drawing.Size(162, 52);
+            this.sprayBoothButton.Size = new System.Drawing.Size(162, 76);
             this.sprayBoothButton.TabIndex = 4;
             this.sprayBoothButton.Text = "Spray Booth";
             this.sprayBoothButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -198,14 +219,31 @@ namespace Dovetail
             this.shopButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.shopButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.shopButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.shopButton.Location = new System.Drawing.Point(0, 52);
+            this.shopButton.Location = new System.Drawing.Point(0, 152);
             this.shopButton.Name = "shopButton";
-            this.shopButton.Size = new System.Drawing.Size(162, 52);
+            this.shopButton.Size = new System.Drawing.Size(162, 76);
             this.shopButton.TabIndex = 3;
             this.shopButton.Text = "Shop";
             this.shopButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.shopButton.UseVisualStyleBackColor = true;
             this.shopButton.Click += new System.EventHandler(this.shopButton_Click);
+            // 
+            // officeButton
+            // 
+            this.officeButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.officeButton.FlatAppearance.BorderSize = 0;
+            this.officeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.officeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.officeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.officeButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.officeButton.Location = new System.Drawing.Point(0, 76);
+            this.officeButton.Name = "officeButton";
+            this.officeButton.Size = new System.Drawing.Size(162, 76);
+            this.officeButton.TabIndex = 6;
+            this.officeButton.Text = "Office";
+            this.officeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.officeButton.UseVisualStyleBackColor = true;
+            this.officeButton.Click += new System.EventHandler(this.officeButton_Click);
             // 
             // homeButton
             // 
@@ -217,7 +255,7 @@ namespace Dovetail
             this.homeButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.homeButton.Location = new System.Drawing.Point(0, 0);
             this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(162, 52);
+            this.homeButton.Size = new System.Drawing.Size(162, 76);
             this.homeButton.TabIndex = 2;
             this.homeButton.Text = "Home";
             this.homeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -337,5 +375,7 @@ namespace Dovetail
         private _dovetail_dbDataSetTableAdapters.UsersTableAdapter usersTableAdapter1;
         private Button maximizeButton;
         private Displays.Shop.ShopMainControl shopMainControl1;
+        private Button settingsButton;
+        private Button officeButton;
     }
 }

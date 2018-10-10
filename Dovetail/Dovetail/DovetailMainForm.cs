@@ -97,6 +97,22 @@ namespace Dovetail
 
             hideAllControls();
         }
+        private void officeButton_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+
+            navbuttonClick(btn);
+
+            hideAllControls();
+        }
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+
+            navbuttonClick(btn);
+
+            hideAllControls();
+        }
 
         private void maximizeButton_Click(object sender, EventArgs e)
         {
@@ -124,5 +140,7 @@ namespace Dovetail
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+       
     }
 }
