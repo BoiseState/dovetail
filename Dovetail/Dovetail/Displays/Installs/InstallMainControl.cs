@@ -19,12 +19,13 @@ namespace Dovetail.Displays.Installs
 
         private void hideAllDisplays()
         {
-
+              
         }
 
         private void overviewButton_Click(object sender, EventArgs e)
         {
             hideAllDisplays();
+            installOverviewControl1.Show();
         }
 
         private void dailyStatsButton_Click(object sender, EventArgs e)

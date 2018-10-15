@@ -49,6 +49,7 @@ namespace Dovetail
         {
             shopMainControl1.Hide();
             sprayBoothMainControl1.Hide();
+            installMainControl1.Hide();
             doveImageBox.Hide();
         }
 
@@ -98,6 +99,8 @@ namespace Dovetail
             navbuttonClick(btn);
 
             hideAllControls();
+
+            installMainControl1.Show();
         }
         private void officeButton_Click(object sender, EventArgs e)
         {

@@ -36,6 +36,7 @@
             this.dailyStatsButton = new System.Windows.Forms.Button();
             this.bufferPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.installOverviewControl1 = new Dovetail.Displays.Installs.InstallOverviewControl();
             this.headerPanel.SuspendLayout();
             this.navPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -136,10 +137,21 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // installOverviewControl1
+            // 
+            this.installOverviewControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.installOverviewControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.installOverviewControl1.Location = new System.Drawing.Point(99, 63);
+            this.installOverviewControl1.Name = "installOverviewControl1";
+            this.installOverviewControl1.Size = new System.Drawing.Size(1002, 511);
+            this.installOverviewControl1.TabIndex = 7;
+            this.installOverviewControl1.Visible = false;
+            // 
             // InstallMainControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Controls.Add(this.installOverviewControl1);
             this.Controls.Add(this.bufferPanel);
             this.Controls.Add(this.headerPanel);
             this.Name = "InstallMainControl";
@@ -160,5 +172,6 @@
         private System.Windows.Forms.Button dailyStatsButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel bufferPanel;
+        private InstallOverviewControl installOverviewControl1;
     }
 }

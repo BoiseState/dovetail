@@ -49,6 +49,7 @@ namespace Dovetail
             this.shopMainControl1 = new Dovetail.Displays.Shop.ShopMainControl();
             this.sprayBoothMainControl1 = new Dovetail.Displays.SprayBooth.SprayBoothMainControl();
             this.doveImageBox = new System.Windows.Forms.PictureBox();
+            this.installMainControl1 = new Dovetail.Displays.Installs.InstallMainControl();
             this.headerPanel.SuspendLayout();
             this.navPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.doveImageBox)).BeginInit();
@@ -301,11 +302,22 @@ namespace Dovetail
             this.doveImageBox.TabIndex = 4;
             this.doveImageBox.TabStop = false;
             // 
+            // installMainControl1
+            // 
+            this.installMainControl1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.installMainControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.installMainControl1.Location = new System.Drawing.Point(162, 77);
+            this.installMainControl1.Name = "installMainControl1";
+            this.installMainControl1.Size = new System.Drawing.Size(1228, 663);
+            this.installMainControl1.TabIndex = 5;
+            this.installMainControl1.Visible = false;
+            // 
             // DovetailMainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1390, 740);
+            this.Controls.Add(this.installMainControl1);
             this.Controls.Add(this.doveImageBox);
             this.Controls.Add(this.sprayBoothMainControl1);
             this.Controls.Add(this.shopMainControl1);
@@ -407,5 +419,6 @@ namespace Dovetail
         private Button officeButton;
         private Displays.SprayBooth.SprayBoothMainControl sprayBoothMainControl1;
         private PictureBox doveImageBox;
+        private Displays.Installs.InstallMainControl installMainControl1;
     }
 }
