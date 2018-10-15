@@ -87,6 +87,8 @@ namespace Dovetail
             navbuttonClick(btn);
 
             hideAllControls();
+
+            sprayBoothMainControl1.Show();
         }
 
         private void installButton_Click(object sender, EventArgs e)
