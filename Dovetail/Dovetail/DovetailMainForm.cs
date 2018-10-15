@@ -42,23 +42,22 @@ namespace Dovetail
         {
             this.Close();
         }
-
+        /// <summary>
+        /// Hide all of the user controls. 
+        /// </summary>
         private void hideAllControls()
         {
             shopMainControl1.Hide();
             sprayBoothMainControl1.Hide();
+            doveImageBox.Hide();
         }
 
         private void doveButton_Click(object sender, EventArgs e)
         {
-            _dovetail_dbDataSet.UsersDataTable users = usersTableAdapter1.GetUserByType("Admin");
+            hideAllControls();
 
-            //users.Count
-            foreach(_dovetail_dbDataSet.UsersRow usr in users)
-            {
-              //  usr.
-            }
-
+            //Show home splash. 
+            doveImageBox.Show();
         }
 
         private void homeButton_Click(object sender, EventArgs e)

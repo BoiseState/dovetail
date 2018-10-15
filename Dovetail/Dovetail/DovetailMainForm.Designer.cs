@@ -37,6 +37,7 @@ namespace Dovetail
             this.navLabel = new System.Windows.Forms.Label();
             this.resizeButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.doveButton = new System.Windows.Forms.Button();
             this.navPanel = new System.Windows.Forms.Panel();
             this.settingsButton = new System.Windows.Forms.Button();
             this.installButton = new System.Windows.Forms.Button();
@@ -45,11 +46,12 @@ namespace Dovetail
             this.officeButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
             this.usersTableAdapter1 = new Dovetail._dovetail_dbDataSetTableAdapters.UsersTableAdapter();
-            this.doveButton = new System.Windows.Forms.Button();
             this.shopMainControl1 = new Dovetail.Displays.Shop.ShopMainControl();
             this.sprayBoothMainControl1 = new Dovetail.Displays.SprayBooth.SprayBoothMainControl();
+            this.doveImageBox = new System.Windows.Forms.PictureBox();
             this.headerPanel.SuspendLayout();
             this.navPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.doveImageBox)).BeginInit();
             this.SuspendLayout();
             // 
             // headerPanel
@@ -128,6 +130,23 @@ namespace Dovetail
             this.exitButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // doveButton
+            // 
+            this.doveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(47)))), ((int)(((byte)(79)))));
+            this.doveButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("doveButton.BackgroundImage")));
+            this.doveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.doveButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.doveButton.FlatAppearance.BorderSize = 0;
+            this.doveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.doveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.doveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.doveButton.Location = new System.Drawing.Point(0, 0);
+            this.doveButton.Name = "doveButton";
+            this.doveButton.Size = new System.Drawing.Size(162, 77);
+            this.doveButton.TabIndex = 0;
+            this.doveButton.UseVisualStyleBackColor = false;
+            this.doveButton.Click += new System.EventHandler(this.doveButton_Click);
             // 
             // navPanel
             // 
@@ -250,23 +269,6 @@ namespace Dovetail
             // 
             this.usersTableAdapter1.ClearBeforeFill = true;
             // 
-            // doveButton
-            // 
-            this.doveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(47)))), ((int)(((byte)(79)))));
-            this.doveButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("doveButton.BackgroundImage")));
-            this.doveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.doveButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.doveButton.FlatAppearance.BorderSize = 0;
-            this.doveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
-            this.doveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.doveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.doveButton.Location = new System.Drawing.Point(0, 0);
-            this.doveButton.Name = "doveButton";
-            this.doveButton.Size = new System.Drawing.Size(162, 77);
-            this.doveButton.TabIndex = 0;
-            this.doveButton.UseVisualStyleBackColor = false;
-            this.doveButton.Click += new System.EventHandler(this.doveButton_Click);
-            // 
             // shopMainControl1
             // 
             this.shopMainControl1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -285,12 +287,26 @@ namespace Dovetail
             this.sprayBoothMainControl1.Name = "sprayBoothMainControl1";
             this.sprayBoothMainControl1.Size = new System.Drawing.Size(1228, 663);
             this.sprayBoothMainControl1.TabIndex = 3;
+            this.sprayBoothMainControl1.Visible = false;
+            // 
+            // doveImageBox
+            // 
+            this.doveImageBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.doveImageBox.Image = ((System.Drawing.Image)(resources.GetObject("doveImageBox.Image")));
+            this.doveImageBox.InitialImage = global::Dovetail.Properties.Resources.Logo2;
+            this.doveImageBox.Location = new System.Drawing.Point(162, 77);
+            this.doveImageBox.Name = "doveImageBox";
+            this.doveImageBox.Size = new System.Drawing.Size(1228, 663);
+            this.doveImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.doveImageBox.TabIndex = 4;
+            this.doveImageBox.TabStop = false;
             // 
             // DovetailMainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1390, 740);
+            this.Controls.Add(this.doveImageBox);
             this.Controls.Add(this.sprayBoothMainControl1);
             this.Controls.Add(this.shopMainControl1);
             this.Controls.Add(this.navPanel);
@@ -303,6 +319,7 @@ namespace Dovetail
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
             this.navPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.doveImageBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -389,5 +406,6 @@ namespace Dovetail
         private Button settingsButton;
         private Button officeButton;
         private Displays.SprayBooth.SprayBoothMainControl sprayBoothMainControl1;
+        private PictureBox doveImageBox;
     }
 }

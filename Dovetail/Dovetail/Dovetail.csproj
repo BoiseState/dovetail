@@ -201,5 +201,11 @@
     <Resource Include="Images\Icons\SectionBackDrop-Blue.png" />
     <Resource Include="Images\Icons\SectionBackDrop-Gray.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\TransparentDoveTail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GrayDove.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
