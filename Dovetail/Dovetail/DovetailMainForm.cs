@@ -46,6 +46,7 @@ namespace Dovetail
         private void hideAllControls()
         {
             shopMainControl1.Hide();
+            sprayBoothMainControl1.Hide();
         }
 
         private void doveButton_Click(object sender, EventArgs e)
