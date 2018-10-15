@@ -8,23 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Dovetail.Displays.SprayBooth
+namespace Dovetail.Displays.Installs
 {
-    public partial class SprayBoothMainControl : UserControl
+    public partial class InstallMainControl : UserControl
     {
-        public SprayBoothMainControl()
+        public InstallMainControl()
         {
             InitializeComponent();
         }
 
         private void hideAllDisplays()
         {
-            sprayBoothOverviewControl1.Hide();
+
         }
+
         private void overviewButton_Click(object sender, EventArgs e)
         {
             hideAllDisplays();
-            sprayBoothOverviewControl1.Show();
         }
 
         private void dailyStatsButton_Click(object sender, EventArgs e)

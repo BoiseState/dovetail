@@ -60,6 +60,18 @@
     </ApplicationDefinition>
     <Compile Include="DatabaseAPI\DovetailDbConnection.cs" />
     <Compile Include="DatabaseAPI\UserAccountHandler.cs" />
+    <Compile Include="Displays\Installs\InstallMainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Displays\Installs\InstallMainControl.Designer.cs">
+      <DependentUpon>InstallMainControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Displays\Installs\InstallOverviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Displays\Installs\InstallOverviewControl.Designer.cs">
+      <DependentUpon>InstallOverviewControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Displays\Shop\ShopMainControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,6 +143,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Displays\Installs\InstallMainControl.resx">
+      <DependentUpon>InstallMainControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Displays\Installs\InstallOverviewControl.resx">
+      <DependentUpon>InstallOverviewControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Displays\Shop\ShopMainControl.resx">
       <DependentUpon>ShopMainControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,7 +206,7 @@
     <Resource Include="Resources\Logo2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Displays\Installs\" />
+    <Resource Include="Images\Icons\installIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Icons\ShopIcon.png" />
