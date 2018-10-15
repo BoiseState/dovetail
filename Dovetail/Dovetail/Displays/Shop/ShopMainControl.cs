@@ -17,13 +17,13 @@ namespace Dovetail.Displays.Shop
             InitializeComponent();
         }
 
-        private void hideAllDisplays()
+        private void HideAllDisplays()
         {
             shopOverViewControl1.Hide();
         }
         private void overviewButton_Click(object sender, EventArgs e)
         {
-            hideAllDisplays();
+            HideAllDisplays();
 
             shopOverViewControl1.Show();
         }

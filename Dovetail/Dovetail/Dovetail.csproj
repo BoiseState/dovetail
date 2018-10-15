@@ -72,6 +72,18 @@
     <Compile Include="Displays\Shop\ShopOverViewControl.Designer.cs">
       <DependentUpon>ShopOverViewControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Displays\SprayBooth\SprayBoothMainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Displays\SprayBooth\SprayBoothMainControl.Designer.cs">
+      <DependentUpon>SprayBoothMainControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Displays\SprayBooth\SprayBoothOverviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Displays\SprayBooth\SprayBoothOverviewControl.Designer.cs">
+      <DependentUpon>SprayBoothOverviewControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DovetailMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +137,12 @@
     <EmbeddedResource Include="Displays\Shop\ShopOverViewControl.resx">
       <DependentUpon>ShopOverViewControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Displays\SprayBooth\SprayBoothMainControl.resx">
+      <DependentUpon>SprayBoothMainControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Displays\SprayBooth\SprayBoothOverviewControl.resx">
+      <DependentUpon>SprayBoothOverviewControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DovetailMainForm.resx">
       <DependentUpon>DovetailMainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,7 +189,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Displays\Installs\" />
-    <Folder Include="Displays\SprayBooth\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Icons\ShopIcon.png" />
