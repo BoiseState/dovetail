@@ -72,6 +72,63 @@ namespace Dovetail.DatabaseAPI
 
             return canSignIn;
         }
+         /// <summary>
+        /// API procedure for removing the specified user into the Dovetail software.
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns>True, if remove successful; false otherwise</returns>
+        public static bool RemoveUser(DovetailUser user)
+        {
+            // Prepare connection to the database
+            SqlConnection connection = DovetailDbConnection.GetConnection();
+            bool canRemove = false;
+
+            // Attempt to connect to database and verify user credentials
+            try
+            {
+                // Prepare sign-in query
+                StringBuilder sb = new StringBuilder();
+                sb.Append("DELETE COUNT(1) ");
+                sb.Append("FROM Users ");
+                sb.Append("WHERE Username = @Username AND Password = @Password AND Access = 1;");
+                string sql = sb.ToString();
+
+                SqlCommand command = new SqlCommand(sql, connection)
+                {
+                    CommandType = CommandType.Text
+                };
+
+                if (string.IsNullOrEmpty(user.Username) || string.IsNullOrEmpty(user.Password))
+                {
+                    connection.Close();
+                    return false;
+                }
+
+                command.Parameters.AddWithValue("@Username", user.Username);
+                command.Parameters.AddWithValue("@Password", user.Password);
+
+                // Execute query; only one valid user should be found/returned
+                int queryResult = Convert.ToInt32(command.ExecuteScalar());
+                if (queryResult != 1)
+                {
+                    connection.Close();
+                    return false;
+                }
+
+                // Sign-in is successful
+                canRemove = true;
+            }
+            catch (SqlException sqle)
+            {
+                connection.Close();
+                MessageBox.Show(sqle.Message);
+            }
+
+            connection.Close();
+
+            return canRemove;
+        }
 
         /// <summary>
         /// API procedure for signing the specified user out of the Dovetail software.
