@@ -29,6 +29,7 @@ namespace Dovetail
             DovetailMainForm mainForm = new DovetailMainForm();
             WindowInteropHelper wih = new WindowInteropHelper(new Window());
             wih.Owner = mainForm.Handle;
+            mainForm.Show();
 
 
             InitializeComponent();
