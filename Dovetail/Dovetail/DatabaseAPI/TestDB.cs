@@ -31,7 +31,7 @@ namespace Dovetail.DatabaseAPI
         }
         public static Boolean RegisterSignInRemove()
         {
-            DovetailUser test = new DovetailUser("test", "test", "test", "test", "test", "test", true);
+            DovetailUser test = new DovetailUser("test", "test", "test", "test", "test", "test", 10.0, true);
             bool result = UserAccountHandler.RegisterNewUser(test);
             result = UserAccountHandler.UserSignIn(test);
             if (result)
@@ -42,9 +42,9 @@ namespace Dovetail.DatabaseAPI
         }
         public static Boolean RevokeAccess()
         {
-            DovetailUser test = new DovetailUser("test", "test", "test", "test", "test", "test", true);
+            DovetailUser test = new DovetailUser("test", "test", "test", "test", "test", "test", 10.0, true);
             bool result = UserAccountHandler.RegisterNewUser(test);
-            result = UserAccountHandler.RevokeAccess("test");
+            result = UserAccountHandler.RevokeAccessForUser("test");
             if (result)
             {
                 result = UserAccountHandler.RemoveUser(test);
@@ -53,7 +53,7 @@ namespace Dovetail.DatabaseAPI
         }
         public static Boolean AllowAccess()
         {
-            DovetailUser test = new DovetailUser("test", "test", "test", "test", "test", "test", false);
+            DovetailUser test = new DovetailUser("test", "test", "test", "test", "test", "test", 10.0, false);
             bool result = UserAccountHandler.RegisterNewUser(test);
             result = UserAccountHandler.AllowAccessForUser("test");
             if (result)
@@ -64,7 +64,7 @@ namespace Dovetail.DatabaseAPI
         }
         public static Boolean UsernameUpdate()
         {
-            DovetailUser test = new DovetailUser("test", "test", "test", "test", "test", "test", false);
+            DovetailUser test = new DovetailUser("test", "test", "test", "test", "test", "test", 10.0, false);
             bool result = UserAccountHandler.RegisterNewUser(test);
             result = UserAccountHandler.UserUpdateUsername("test", "test1");
             if (result)
@@ -80,7 +80,7 @@ namespace Dovetail.DatabaseAPI
         }
         public static Boolean PasswordUpdate()
         {
-            DovetailUser test = new DovetailUser("test", "test", "test", "test", "test", "test", false);
+            DovetailUser test = new DovetailUser("test", "test", "test", "test", "test", "test", 10.0, false);
             bool result = UserAccountHandler.RegisterNewUser(test);
             result = UserAccountHandler.UserUpdatePassword("test", "test1");
             if(result)
@@ -95,12 +95,12 @@ namespace Dovetail.DatabaseAPI
         }
         public static Boolean WageUpdate()
         {
-            DovetailUser test = new DovetailUser("test", "test", "test", "test", "test", "test", false);
+            DovetailUser test = new DovetailUser("test", "test", "test", "test", "test", "test", 9.0, false);
             bool result = UserAccountHandler.RegisterNewUser(test);
-            result = UserAccountHandler.UserUpdateWage("test", "test1");
+            result = UserAccountHandler.UserUpdateWage("test", 10.0);
             if (result)
             {
-                if (test.Wage != "test1")
+                if (test.Wage != 10.0)
                 {
                     result = false;
                 }
@@ -110,7 +110,7 @@ namespace Dovetail.DatabaseAPI
         }
         public static Boolean EmailUpdate()
         {
-            DovetailUser test = new DovetailUser("test", "test", "test", "test", "test", "test", false);
+            DovetailUser test = new DovetailUser("test", "test", "test", "test", "test", "test", 9.0, false);
             bool result = UserAccountHandler.RegisterNewUser(test);
             result = UserAccountHandler.UserUpdateEmail("test", "test1");
             if (result)
@@ -125,7 +125,7 @@ namespace Dovetail.DatabaseAPI
         }
         public static Boolean UserTypeUpdate()
         {
-            DovetailUser test = new DovetailUser("test", "test", "test", "test", "test", "test", false);
+            DovetailUser test = new DovetailUser("test", "test", "test", "test", "test", "test", 10.0, false);
             bool result = UserAccountHandler.RegisterNewUser(test);
             result = UserAccountHandler.UserUpdateUserType("test", "test1");
             if (result)

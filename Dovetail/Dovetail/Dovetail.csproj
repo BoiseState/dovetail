@@ -60,6 +60,7 @@
     </ApplicationDefinition>
     <Compile Include="DatabaseAPI\DovetailDbConnection.cs" />
     <Compile Include="DatabaseAPI\UserAccountHandler.cs" />
+    <Compile Include="DatabaseAPI\TestDB.cs" />
     <Compile Include="Displays\Installs\InstallMainControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

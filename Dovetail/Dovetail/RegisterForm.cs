@@ -21,7 +21,7 @@ namespace Dovetail
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bool registerSuccess = UserAccountHandler.RegisterNewUser(new DovetailUser(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, "employee", true));
+            bool registerSuccess = UserAccountHandler.RegisterNewUser(new DovetailUser(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, "employee", 10.0, true));
 
             if (!registerSuccess)
             {

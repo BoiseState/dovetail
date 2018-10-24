@@ -39,6 +39,10 @@ namespace Dovetail
         /// Whether Ashby's Cabinetry employee has access to Dovetail software (true/false)
         /// </summary>
         public bool HasAccess { get; set; }
+        /// <summary>
+        /// User/employee's wage
+        /// </summary>
+        public double Wage { get; set; }
 
         /// <summary>
         /// Create a new Dovetail user/employee
@@ -49,8 +53,9 @@ namespace Dovetail
         /// <param name="lastName"></param>
         /// <param name="email"></param>
         /// <param name="userType"></param>
+        /// <param name="wage"></param>
         /// <param name="hasAccess"></param>
-        public DovetailUser(string username, string password, string firstName, string lastName, string email, string userType, bool hasAccess)
+        public DovetailUser(string username, string password, string firstName, string lastName, string email, string userType, double wage, bool hasAccess)
         {
             Username = username;
             Password = password;
@@ -58,6 +63,7 @@ namespace Dovetail
             LastName = lastName;
             Email = email;
             UserType = userType;
+            Wage = wage;
             HasAccess = hasAccess;
         }
 
