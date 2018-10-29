@@ -73,6 +73,12 @@
     <Compile Include="Displays\Installs\InstallOverviewControl.Designer.cs">
       <DependentUpon>InstallOverviewControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Displays\Shop\ShopHistoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Displays\Shop\ShopHistoryControl.Designer.cs">
+      <DependentUpon>ShopHistoryControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Displays\Shop\ShopMainControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Displays\Installs\InstallOverviewControl.resx">
       <DependentUpon>InstallOverviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Displays\Shop\ShopHistoryControl.resx">
+      <DependentUpon>ShopHistoryControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Displays\Shop\ShopMainControl.resx">
       <DependentUpon>ShopMainControl.cs</DependentUpon>

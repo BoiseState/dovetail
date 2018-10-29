@@ -37,6 +37,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.shopOverViewControl1 = new Dovetail.Displays.Shop.ShopOverViewControl();
             this.bufferPanel = new System.Windows.Forms.Panel();
+            this.shopHistoryControl1 = new Dovetail.Displays.Shop.ShopHistoryControl();
             this.headerPanel.SuspendLayout();
             this.navPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,6 +81,7 @@
             this.historyButton.TabIndex = 2;
             this.historyButton.Text = "History";
             this.historyButton.UseVisualStyleBackColor = false;
+            this.historyButton.Click += new System.EventHandler(this.historyButton_Click);
             // 
             // dailyStatsButton
             // 
@@ -145,10 +147,21 @@
             this.bufferPanel.Size = new System.Drawing.Size(99, 612);
             this.bufferPanel.TabIndex = 2;
             // 
+            // shopHistoryControl1
+            // 
+            this.shopHistoryControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.shopHistoryControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.shopHistoryControl1.Location = new System.Drawing.Point(99, 63);
+            this.shopHistoryControl1.Name = "shopHistoryControl1";
+            this.shopHistoryControl1.Size = new System.Drawing.Size(1096, 612);
+            this.shopHistoryControl1.TabIndex = 3;
+            this.shopHistoryControl1.Visible = false;
+            // 
             // ShopMainControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Controls.Add(this.shopHistoryControl1);
             this.Controls.Add(this.shopOverViewControl1);
             this.Controls.Add(this.bufferPanel);
             this.Controls.Add(this.headerPanel);
@@ -171,5 +184,6 @@
         private System.Windows.Forms.Button overviewButton;
         private ShopOverViewControl shopOverViewControl1;
         private System.Windows.Forms.Panel bufferPanel;
+        private ShopHistoryControl shopHistoryControl1;
     }
 }
