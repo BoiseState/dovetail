@@ -150,9 +150,12 @@
             // 
             // sprayHistoryControl1
             // 
-            this.sprayHistoryControl1.Location = new System.Drawing.Point(970, 130);
+            this.sprayHistoryControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
+            this.sprayHistoryControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sprayHistoryControl1.Location = new System.Drawing.Point(99, 63);
+            this.sprayHistoryControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sprayHistoryControl1.Name = "sprayHistoryControl1";
-            this.sprayHistoryControl1.Size = new System.Drawing.Size(150, 150);
+            this.sprayHistoryControl1.Size = new System.Drawing.Size(1024, 580);
             this.sprayHistoryControl1.TabIndex = 6;
             // 
             // SprayBoothMainControl
