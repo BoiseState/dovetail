@@ -12,26 +12,56 @@ namespace Dovetail.Displays.Shop
 {
     public partial class ShopOverViewControl : UserControl
     {
+        _dovetail_dbDataSet.Business_ShopRow TodayShopStats;
+
         public ShopOverViewControl()
         {
             InitializeComponent();
 
-            loadJobs();
+            LoadToday();
         }
 
-        private void currentJobsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void LoadToday()
         {
-            if(currentJobsListBox.SelectedItem != null)
+            try
             {
-                selectedJobLabel.Text = currentJobsListBox.SelectedItem.ToString();
+                todaysDateLabel.Text = DateTime.Today.Date.ToShortDateString();
+                _dovetail_dbDataSet.Business_ShopDataTable shopTable = business_ShopTableAdapter1.GetDataByDateInShop(DateTime.Today.Date.ToString());
+
+                TodayShopStats = shopTable.NewBusiness_ShopRow();
+
+                if(shopTable.Count > 0)
+                {
+                    foreach(_dovetail_dbDataSet.Business_ShopRow row in shopTable)
+                    {
+                        TodayShopStats = row;
+                    }
+
+                    SetStats();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
-        /// <summary>
-        /// This method is responsible for loading the current jobs into the list box.
-        /// </summary>
-        private void loadJobs()
+
+        private void SetStats()
         {
-            jobsInProgressLabel.Text = currentJobsListBox.Items.Count.ToString();
+            finishedPartsLabel.Text = TodayShopStats.numFinishedParts.ToString();
+            sheetsCutLabel.Text = TodayShopStats.numSheetsCut.ToString();
+            boxesBuiltLabel.Text = TodayShopStats.numBoxesBuilt.ToString();
+            edgeBardedPartsLabel.Text = TodayShopStats.numPartsEdgeBarded.ToString();
+            drawersBuiltLabel.Text = TodayShopStats.numDrawersBuilt.ToString();
+            doorsCutLabel.Text = TodayShopStats.numDoorsCut.ToString();
+
+            boxHoursLabel.Text = TodayShopStats.totalHoursBoxes.ToString();
+            cuttingHoursLabel.Text = TodayShopStats.totalHoursCutting.ToString();
+            drawerHoursLabel.Text = TodayShopStats.totalHoursDrawers.ToString();
+            edgeBandingHours.Text = TodayShopStats.totalHoursEdgeBanding.ToString();
+
+            totalHoursLabel.Text = (TodayShopStats.totalHoursBoxes + TodayShopStats.totalHoursCutting + TodayShopStats.totalHoursDrawers + TodayShopStats.totalHoursEdgeBanding).ToString();
+
         }
     }
 }

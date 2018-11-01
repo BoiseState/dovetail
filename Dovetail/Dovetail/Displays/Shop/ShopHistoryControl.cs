@@ -56,18 +56,6 @@ namespace Dovetail.Displays.Shop
             InitializeComponent();
         }
 
-        private void ShopDatePicker_ValueChanged(object sender, EventArgs e)
-        {
-            //Animates that panel when the value is selected. 
-            if (!TotalsPanel.Visible)
-            {
-                animationTimer.Enabled = true;
-            }
-
-            LoadShopOnDate();
-                
-        }
-
         /// <summary>
         /// This method is responisble for querying the Database based on the
         /// date picked by the user. 
@@ -112,6 +100,24 @@ namespace Dovetail.Displays.Shop
             }
 
             DisplayStats();
+
+            DisplayStatsTable();
+        }
+
+        /// <summary>
+        /// This method is responsible for placing the ShopsStats into the a 
+        /// table for the user to see.
+        /// </summary>
+        private void DisplayStatsTable()
+        {
+            try
+            {
+                jobsDataGridView.DataSource = ShopStats;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         /// <summary>
@@ -130,6 +136,15 @@ namespace Dovetail.Displays.Shop
             TotalFinishedPartsLabel.Text = NumFinishedParts.ToString("#.##");
 
             TotalHoursLabel.Text = TotalHours.ToString("#.##");
+
+            if(Return > 0)
+            {
+                ReturnLabel.ForeColor = Color.LightGreen;
+            }
+            else
+            {
+                ReturnLabel.ForeColor = Color.Red;
+            }
             ReturnLabel.Text = "$" + Return.ToString("#.##");
         }
 
@@ -218,6 +233,17 @@ namespace Dovetail.Displays.Shop
             total = total - (TotalHours* HourlyWage);
 
             return total;
+        }
+
+        private void ApplyButton_Click(object sender, EventArgs e)
+        {
+            //Animates that panel when the value is selected. 
+            if (!TotalsPanel.Visible)
+            {
+                animationTimer.Enabled = true;
+            }
+
+            LoadShopOnDate();
         }
     }
 }
