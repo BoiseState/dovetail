@@ -62,10 +62,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.animationTimer = new System.Windows.Forms.Timer(this.components);
             this.business_ShopTableAdapter1 = new Dovetail._dovetail_dbDataSetTableAdapters.Business_ShopTableAdapter();
-            this.JobsListView = new System.Windows.Forms.ListView();
+            this.jobsDataGridView = new System.Windows.Forms.DataGridView();
+            this.ApplyButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.TotalsPanel.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.jobsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -107,7 +109,6 @@
             this.ShopDatePicker.Name = "ShopDatePicker";
             this.ShopDatePicker.Size = new System.Drawing.Size(327, 32);
             this.ShopDatePicker.TabIndex = 6;
-            this.ShopDatePicker.ValueChanged += new System.EventHandler(this.ShopDatePicker_ValueChanged);
             // 
             // label2
             // 
@@ -148,9 +149,9 @@
             this.TotalsPanel.Controls.Add(this.label4);
             this.TotalsPanel.Controls.Add(this.label3);
             this.TotalsPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.TotalsPanel.Location = new System.Drawing.Point(925, 78);
+            this.TotalsPanel.Location = new System.Drawing.Point(924, 78);
             this.TotalsPanel.Name = "TotalsPanel";
-            this.TotalsPanel.Size = new System.Drawing.Size(0, 742);
+            this.TotalsPanel.Size = new System.Drawing.Size(1, 742);
             this.TotalsPanel.TabIndex = 9;
             this.TotalsPanel.Visible = false;
             // 
@@ -316,7 +317,7 @@
             this.panel4.Controls.Add(this.ReturnLabel);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 667);
+            this.panel4.Location = new System.Drawing.Point(0, 646);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(321, 75);
             this.panel4.TabIndex = 13;
@@ -440,25 +441,52 @@
             // 
             this.business_ShopTableAdapter1.ClearBeforeFill = true;
             // 
-            // JobsListView
+            // jobsDataGridView
             // 
-            this.JobsListView.BackColor = System.Drawing.SystemColors.Window;
-            this.JobsListView.Location = new System.Drawing.Point(20, 182);
-            this.JobsListView.Name = "JobsListView";
-            this.JobsListView.Size = new System.Drawing.Size(798, 147);
-            this.JobsListView.TabIndex = 10;
-            this.JobsListView.UseCompatibleStateImageBehavior = false;
+            this.jobsDataGridView.AllowUserToDeleteRows = false;
+            this.jobsDataGridView.AllowUserToOrderColumns = true;
+            this.jobsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.jobsDataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.jobsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.jobsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.jobsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.jobsDataGridView.Location = new System.Drawing.Point(31, 165);
+            this.jobsDataGridView.MultiSelect = false;
+            this.jobsDataGridView.Name = "jobsDataGridView";
+            this.jobsDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jobsDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.jobsDataGridView.RowTemplate.Height = 24;
+            this.jobsDataGridView.Size = new System.Drawing.Size(773, 463);
+            this.jobsDataGridView.TabIndex = 10;
+            // 
+            // ApplyButton
+            // 
+            this.ApplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.ApplyButton.FlatAppearance.BorderSize = 0;
+            this.ApplyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.ApplyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ApplyButton.Font = new System.Drawing.Font("Calibri Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApplyButton.ForeColor = System.Drawing.Color.White;
+            this.ApplyButton.Location = new System.Drawing.Point(496, 113);
+            this.ApplyButton.Name = "ApplyButton";
+            this.ApplyButton.Size = new System.Drawing.Size(73, 34);
+            this.ApplyButton.TabIndex = 11;
+            this.ApplyButton.Text = "Apply!";
+            this.ApplyButton.UseVisualStyleBackColor = false;
+            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
             // ShopHistoryControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.Controls.Add(this.ApplyButton);
             this.Controls.Add(this.TotalsPanel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ShopDatePicker);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.JobsListView);
+            this.Controls.Add(this.jobsDataGridView);
             this.Name = "ShopHistoryControl";
             this.Size = new System.Drawing.Size(1073, 820);
             this.panel1.ResumeLayout(false);
@@ -467,6 +495,7 @@
             this.TotalsPanel.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.jobsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -507,6 +536,7 @@
         private System.Windows.Forms.Label TotalDrawersLabel;
         private System.Windows.Forms.Timer animationTimer;
         private _dovetail_dbDataSetTableAdapters.Business_ShopTableAdapter business_ShopTableAdapter1;
-        private System.Windows.Forms.ListView JobsListView;
+        private System.Windows.Forms.DataGridView jobsDataGridView;
+        private System.Windows.Forms.Button ApplyButton;
     }
 }
