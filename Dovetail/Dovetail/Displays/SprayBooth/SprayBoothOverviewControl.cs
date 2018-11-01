@@ -43,7 +43,7 @@ namespace Dovetail.Displays.SprayBooth
         }
         private void SetStats()
         {
-            jobsInProgressLabel.Text = DateTime.Now.Date.ToString();
+            jobsInProgressLabel.Text = DateTime.Today.ToString();
             label2.Text = NumPartsFinished.ToString();
             totalPartsLabel.Text = TotalHoursFinish.ToString();
         }

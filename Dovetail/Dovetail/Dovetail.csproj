@@ -103,6 +103,12 @@
     <Compile Include="Displays\SprayBooth\SprayBoothOverviewControl.Designer.cs">
       <DependentUpon>SprayBoothOverviewControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Displays\SprayBooth\SprayHistoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Displays\SprayBooth\SprayHistoryControl.Designer.cs">
+      <DependentUpon>SprayHistoryControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DovetailMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Displays\SprayBooth\SprayBoothOverviewControl.resx">
       <DependentUpon>SprayBoothOverviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Displays\SprayBooth\SprayHistoryControl.resx">
+      <DependentUpon>SprayHistoryControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DovetailMainForm.resx">
       <DependentUpon>DovetailMainForm.cs</DependentUpon>

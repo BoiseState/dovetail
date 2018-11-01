@@ -15,11 +15,13 @@ namespace Dovetail.Displays.SprayBooth
         public SprayBoothMainControl()
         {
             InitializeComponent();
+            hideAllDisplays();
         }
 
         private void hideAllDisplays()
         {
             sprayBoothOverviewControl1.Hide();
+            sprayHistoryControl1.Hide();
         }
         private void overviewButton_Click(object sender, EventArgs e)
         {
@@ -35,6 +37,7 @@ namespace Dovetail.Displays.SprayBooth
         private void historyButton_Click(object sender, EventArgs e)
         {
             hideAllDisplays();
+            sprayHistoryControl1.Show();
         }
     }
 }

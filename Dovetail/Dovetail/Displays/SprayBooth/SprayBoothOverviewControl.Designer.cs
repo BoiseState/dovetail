@@ -175,7 +175,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label2.ForeColor = System.Drawing.Color.Yellow;
             this.label2.Location = new System.Drawing.Point(293, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 26);
@@ -190,9 +190,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(3, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(269, 26);
+            this.label3.Size = new System.Drawing.Size(185, 26);
             this.label3.TabIndex = 0;
-            this.label3.Text = "NUMBER OF PARTS FINISHED: ";
+            this.label3.Text = "NUMBER OF PARTS: ";
             // 
             // panel4
             // 

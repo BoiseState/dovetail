@@ -37,6 +37,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bufferPanel = new System.Windows.Forms.Panel();
             this.sprayBoothOverviewControl1 = new Dovetail.Displays.SprayBooth.SprayBoothOverviewControl();
+            this.sprayHistoryControl1 = new Dovetail.Displays.SprayBooth.SprayHistoryControl();
             this.headerPanel.SuspendLayout();
             this.navPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -147,10 +148,18 @@
             this.sprayBoothOverviewControl1.TabIndex = 5;
             this.sprayBoothOverviewControl1.Visible = false;
             // 
+            // sprayHistoryControl1
+            // 
+            this.sprayHistoryControl1.Location = new System.Drawing.Point(970, 130);
+            this.sprayHistoryControl1.Name = "sprayHistoryControl1";
+            this.sprayHistoryControl1.Size = new System.Drawing.Size(150, 150);
+            this.sprayHistoryControl1.TabIndex = 6;
+            // 
             // SprayBoothMainControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Controls.Add(this.sprayHistoryControl1);
             this.Controls.Add(this.sprayBoothOverviewControl1);
             this.Controls.Add(this.bufferPanel);
             this.Controls.Add(this.headerPanel);
@@ -173,5 +182,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel bufferPanel;
         private SprayBoothOverviewControl sprayBoothOverviewControl1;
+        private SprayHistoryControl sprayHistoryControl1;
     }
 }
