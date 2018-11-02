@@ -17,25 +17,26 @@ namespace Dovetail.Displays.Installs
             InitializeComponent();
         }
 
-        private void hideAllDisplays()
+        private void HideAllDisplays()
         {
-              
+            installOverviewControl1.Hide();
+            installHistoryControl1.Hide();
         }
 
         private void overviewButton_Click(object sender, EventArgs e)
         {
-            hideAllDisplays();
+            HideAllDisplays();
             installOverviewControl1.Show();
         }
 
         private void dailyStatsButton_Click(object sender, EventArgs e)
         {
-            hideAllDisplays();
+            HideAllDisplays();
         }
 
         private void historyButton_Click(object sender, EventArgs e)
         {
-            hideAllDisplays();
+            HideAllDisplays();
             installHistoryControl1.Show();
         }
     }
