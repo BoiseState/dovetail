@@ -36,6 +36,7 @@ namespace Dovetail.Displays.Installs
         private void historyButton_Click(object sender, EventArgs e)
         {
             hideAllDisplays();
+            installHistoryControl1.Show();
         }
     }
 }

@@ -173,5 +173,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel bufferPanel;
         private InstallOverviewControl installOverviewControl1;
+        private InstallHistoryControl installHistoryControl1;
     }
 }
