@@ -20,7 +20,7 @@ namespace Dovetail.Displays.Installs
         private void HideAllDisplays()
         {
             installOverviewControl1.Hide();
-            installHistoryControl1.Hide();
+            installHistoryControl2.Hide();
         }
 
         private void overviewButton_Click(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace Dovetail.Displays.Installs
         private void historyButton_Click(object sender, EventArgs e)
         {
             HideAllDisplays();
-            installHistoryControl1.Show();
+            installHistoryControl2.Show();
         }
     }
 }

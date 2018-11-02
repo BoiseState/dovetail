@@ -34,8 +34,9 @@
             this.headerPanel = new System.Windows.Forms.Panel();
             this.navPanel = new System.Windows.Forms.Panel();
             this.dailyStatsButton = new System.Windows.Forms.Button();
-            this.bufferPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bufferPanel = new System.Windows.Forms.Panel();
+            this.installHistoryControl2 = new Dovetail.Displays.Installs.InstallHistoryControl();
             this.installOverviewControl1 = new Dovetail.Displays.Installs.InstallOverviewControl();
             this.headerPanel.SuspendLayout();
             this.navPanel.SuspendLayout();
@@ -118,14 +119,6 @@
             this.dailyStatsButton.UseVisualStyleBackColor = false;
             this.dailyStatsButton.Click += new System.EventHandler(this.dailyStatsButton_Click);
             // 
-            // bufferPanel
-            // 
-            this.bufferPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bufferPanel.Location = new System.Drawing.Point(0, 63);
-            this.bufferPanel.Name = "bufferPanel";
-            this.bufferPanel.Size = new System.Drawing.Size(99, 511);
-            this.bufferPanel.TabIndex = 6;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -137,6 +130,25 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // bufferPanel
+            // 
+            this.bufferPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bufferPanel.Location = new System.Drawing.Point(0, 63);
+            this.bufferPanel.Name = "bufferPanel";
+            this.bufferPanel.Size = new System.Drawing.Size(99, 511);
+            this.bufferPanel.TabIndex = 6;
+            // 
+            // installHistoryControl2
+            // 
+            this.installHistoryControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
+            this.installHistoryControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.installHistoryControl2.Location = new System.Drawing.Point(99, 63);
+            this.installHistoryControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.installHistoryControl2.Name = "installHistoryControl2";
+            this.installHistoryControl2.Size = new System.Drawing.Size(1002, 511);
+            this.installHistoryControl2.TabIndex = 7;
+            this.installHistoryControl2.Visible = false;
+            // 
             // installOverviewControl1
             // 
             this.installOverviewControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
@@ -144,14 +156,14 @@
             this.installOverviewControl1.Location = new System.Drawing.Point(99, 63);
             this.installOverviewControl1.Name = "installOverviewControl1";
             this.installOverviewControl1.Size = new System.Drawing.Size(1002, 511);
-            this.installOverviewControl1.TabIndex = 7;
-            this.installOverviewControl1.Visible = false;
+            this.installOverviewControl1.TabIndex = 8;
             // 
             // InstallMainControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Controls.Add(this.installOverviewControl1);
+            this.Controls.Add(this.installHistoryControl2);
             this.Controls.Add(this.bufferPanel);
             this.Controls.Add(this.headerPanel);
             this.Name = "InstallMainControl";
@@ -172,7 +184,8 @@
         private System.Windows.Forms.Button dailyStatsButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel bufferPanel;
-        private InstallOverviewControl installOverviewControl1;
         private InstallHistoryControl installHistoryControl1;
+        private InstallHistoryControl installHistoryControl2;
+        private InstallOverviewControl installOverviewControl1;
     }
 }

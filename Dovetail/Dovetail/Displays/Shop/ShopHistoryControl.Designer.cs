@@ -463,8 +463,8 @@
             // 
             this.ApplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ApplyButton.FlatAppearance.BorderSize = 0;
-            this.ApplyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.ApplyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.ApplyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
+            this.ApplyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ApplyButton.Font = new System.Drawing.Font("Calibri Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApplyButton.ForeColor = System.Drawing.Color.White;
