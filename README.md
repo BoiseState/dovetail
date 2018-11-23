@@ -15,12 +15,9 @@ Martin          | Lance           | lancemartin06          | Developer
 Williams        | Chase           | chaselw                | Scrum Master
 
 
-## Team Velocity:
+## Development Environment Setup
 
-Sprint | Estimated Velocity | Actual Velocity
------- | ------------------ | ---------------
-1      | 100                | 44
-2      | 45                 | 25
-3      | TBD                | TBD
-4      | TBD                | TBD
-
+Please navigate to the "Dev Setup" folder and open the setup manual for 
+instructions on how to set up your development environment. This includes 
+Visual Studio 2017, SQL Server Management Studio (SSMS), and how to connect 
+the Git repo in VS 2017.
