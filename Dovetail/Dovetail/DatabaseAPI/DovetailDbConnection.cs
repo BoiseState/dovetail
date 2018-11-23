@@ -23,10 +23,10 @@ namespace Dovetail.DatabaseAPI
             // SQL Server database connection information
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder
             {
-                DataSource = "dovetail2018.database.windows.net",
+                DataSource = "dovetail18.database.windows.net",
                 UserID = "admin0",
                 Password = "bronco!devs098",
-                InitialCatalog = "dovetail-db"
+                InitialCatalog = "dovetail18-db"
             };
 
             // Create the database connection instance
