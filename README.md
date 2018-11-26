@@ -21,3 +21,9 @@ Please navigate to the "Dev Setup" folder and open the setup manual for
 instructions on how to set up your development environment. This includes 
 Visual Studio 2017, SQL Server Management Studio (SSMS), and how to connect 
 the Git repo in VS 2017.
+
+
+## Help Contact
+
+Feel free to email Justin Brown (previous Product Owner) at jbro11980@gmail.com 
+for more detailed questions or assistance for the project.
