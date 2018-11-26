@@ -1,11 +1,19 @@
-## Team Name: BitJunkies
+## Team Name
 
-## Sponsor Name: Ashby's Cabinetry 
+BitJunkies
 
-## Project Description:
+## Sponsor Name
+
+Ashby's Cabinetry, Inc.
+
+## Project Name
+
+Dovetail (Ashby's Cabinetry Analytics)
+
+## Project Description
 Build a scorecard to keep track of prices, times, etc. 
 
-## Team Members:
+## Team Members
 
 Last Name       | First Name      | GitHub User Name       | Scrum Role
 --------------- | --------------- | ---------------------- | ---------------
@@ -26,4 +34,4 @@ the Git repo in VS 2017.
 ## Help Contact
 
 Feel free to email Justin Brown (previous Product Owner) at jbro11980@gmail.com 
-for more detailed questions or assistance for the project.
+for questions or assistance for the project.
