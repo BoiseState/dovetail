@@ -34,4 +34,4 @@ the Git repo in VS 2017.
 ## Help Contact
 
 Feel free to email Justin Brown (previous Product Owner) at jbro11980@gmail.com 
-for questions or assistance for the project.
+for questions or assistance on the project.
